@@ -98,13 +98,26 @@ def main(meetings):
     M = {}
     for mt in meetings:
         f = load(mt)
-        g = gold_labels(mt, len(f["near_db"]))
+        g = [v if ok else 0 for v, ok in
+             zip(gold_labels(mt, len(f["near_db"])), engine.alive(f))]
         # Calibrate as a school would: on a typical, teacher-heavy lesson
         # (~75%). Calibrating on the balanced 47% meeting and extrapolating
         # to 89% was measured to be off by up to 12 points.
         cf, cg = teacher_heavy(f, g, 0.3)
-        M[mt] = {"frames": f, "gold": g,
-                 "recall": engine.calibrate(cf, gold_share(cg))}
+        try:
+            recall = engine.calibrate(cf, gold_share(cg))
+        except ValueError as e:
+            # the measured share cannot come from the true one under this
+            # model: the method has failed on this meeting, and saying so
+            # is the result
+            print(f"\n=== {mt} ===  CALIBRATION IMPOSSIBLE: {e}")
+            r = engine.compute(f)
+            print(f"  uncalibrated teacher share {r['tier1']['teacher_share']:.1%}"
+                  f"  vs hand-coded {gold_share(g):.1%}")
+            for w in r["warnings"]:
+                print(f"  warning: {w}")
+            continue
+        M[mt] = {"frames": f, "gold": g, "recall": recall}
 
     out = {}
     for mt, d in M.items():

@@ -53,6 +53,12 @@ the `Lapel-0` and `Array1-01` WAVs for IS1001c and ES2006c under
 [AMI corpus mirror](https://groups.inf.ed.ac.uk/ami/download/). The tests
 that need them are skipped when they are absent.
 
+### Testing it as a team member
+
+See [`docs/TESTING.md`](docs/TESTING.md): signing in to the team server,
+what the three sample lessons should show, adding a lesson from open AMI
+recordings, and how to report problems.
+
 ### Running it for a team
 
 On one machine the app needs no accounts and only answers on 127.0.0.1. To
@@ -103,6 +109,11 @@ cut out, which brings the teacher share up to lesson-like levels:
 
 On every lesson-like row the calibrated error is 3.3 points or less. Pushed down to a
 balanced 47% lesson, the error grows to 5.2. Carrying one meeting's calibration to the other gives up to 7.6.
+A third meeting, **ES2002a, fails**, and it was not used to tune anything.
+Its lapel cuts out for 7% of the meeting, which the app now detects, warns
+about and leaves out. Its wearer speaks only 11% of the time, and a loud
+neighbour on the same lapel is counted as the teacher, so it reads 56%.
+The app does not detect that second problem yet (`docs/TESTING.md`).
 These are seated adults in meeting rooms. **No classroom recording has been
 tested yet**, and that is the next gate (spec section 8).
 

@@ -171,9 +171,28 @@ def _pct(x: list[float], pct: float) -> float:
     return s[int(pct / 100 * (len(s) - 1))] if s else 0.0
 
 
+DEAD_DB = -90.0  # a real mic never sits this low; this is a cut-out
+
+
+def alive(frames: dict) -> list[bool]:
+    """False where either mic is digitally silent. AMI ES2002a's lapel cuts
+    out for 7% of the meeting; read as "lapel quiet, so a pupil", those
+    frames wrecked its talk share."""
+    return [a > DEAD_DB and b > DEAD_DB
+            for a, b in zip(frames["near_db"], frames["far_db"])]
+
+
+def usable_speech(frames: dict, hop: float = HOP) -> list[bool]:
+    al = alive(frames)
+    sp = speech_mask(frames["vad_segments"], len(al), hop)
+    return [x and y for x, y in zip(sp, al)]
+
+
 def deltas(frames: dict) -> list[float]:
     rn, rf = frames["near_db"], frames["far_db"]
-    bn, bf = _pct(rn, BASELINE_PCT), _pct(rf, BASELINE_PCT)
+    al = alive(frames)
+    bn = _pct([v for v, ok in zip(rn, al) if ok] or rn, BASELINE_PCT)
+    bf = _pct([v for v, ok in zip(rf, al) if ok] or rf, BASELINE_PCT)
     return [(a - bn) - (b - bf) for a, b in zip(rn, rf)]
 
 
@@ -295,7 +314,7 @@ def calibrate(frames: dict, teacher_share: float) -> float:
     if not 0.0 < teacher_share < 1.0:
         raise ValueError("teacher share must be between 0 and 100%")
     d = deltas(frames)
-    sp = speech_mask(frames["vad_segments"], len(d))
+    sp = usable_speech(frames)
     m = share_at(sp, d, MARGIN_DB)
     p = PUPIL_LEAK + (m - PUPIL_LEAK) / teacher_share
     if not PUPIL_LEAK + 0.1 < p <= 1.05:
@@ -319,7 +338,8 @@ def compute(frames: dict, settings: Settings | None = None) -> dict:
     hop = frames["hop"]
     d = deltas(frames)
     n = len(d)
-    speech = speech_mask(frames["vad_segments"], n, hop)
+    speech = usable_speech(frames, hop)
+    dead = n - sum(alive(frames))
     raw, sm = labels(speech, d, MARGIN_DB)
 
     dur = n * hop
@@ -367,6 +387,11 @@ def compute(frames: dict, settings: Settings | None = None) -> dict:
 
     sd = statistics.pstdev(d) if d else 0.0
     warnings = list(frames.get("warnings", []))
+    if dead * hop >= 10 and dead / max(1, n) >= 0.01:
+        warnings.append(
+            f"a microphone was silent (cut out) for {dead * hop / 60:.1f} min "
+            f"({dead / n:.0%} of the recording). Those moments are left out "
+            "of every figure. Check the mic's battery and cable.")
     if sd < 1.0:
         warnings.append("the two channels are nearly identical, so teacher "
                         "and pupil speech cannot be told apart. Check the "
@@ -402,7 +427,8 @@ def compute(frames: dict, settings: Settings | None = None) -> dict:
             "teacher_share": round(tshare, 4),
             "teacher_s": round(teacher_s, 1),
             "pupil_s": round(pupil_s, 1),
-            "silence_s": round(dur - speech_s, 1),
+            "silence_s": round(dur - speech_s - dead * hop, 1),
+            "mic_dropout_s": round(dead * hop, 1),
             "longest_teacher_stretch_s": round(
                 max((b - a for a, b in stretches), default=0) * hop, 1),
             "pupil_turns": len(p_turns),

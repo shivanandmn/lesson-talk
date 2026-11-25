@@ -372,5 +372,18 @@ measured around the median misfired once the teacher dominated, whereas
 extremes measured from the noise floor separate cleanly at every share
 (p98 +14..+22 dB, p2 -3..-4 dB).
 
+**4. A third meeting fails, and it was not used for tuning.** AMI ES2002a
+reads 56% teacher talk against a hand-coded 11%. Two causes. The lapel cuts
+out (digital silence) for 7% of the meeting, and those frames read as
+"lapel quiet, so someone else". Frames where either mic is below -90 dBFS
+are now left out, with a warning on the card. The second cause is not fixed:
+the wearer barely speaks, and the neighbour who talks half the meeting is
+loud enough on the lapel (+5.7 dB over baseline on average) to clear the
+4 dB margin. Separability of the wearer is AUC 0.78 here, against 0.98 and
+0.98 on the other two meetings. The classroom version of this is a pupil
+seated beside the teacher, or a teacher crouched at a desk. The card gives
+no warning yet. That makes the move-around lesson in section 8 more
+important, not less.
+
 Still untested, and still the main risk: a real classroom, with a teacher
 who moves around.
