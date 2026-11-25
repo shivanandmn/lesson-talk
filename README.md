@@ -15,6 +15,9 @@ identified. The product spec and the evidence behind it are in
 *The demo lessons are two AMI corpus meetings (CC BY 4.0), uncalibrated, not
 classroom recordings.*
 
+`tools/build_demo.py` turns a lesson library into a single read-only demo
+page with numbers only and no audio, which can be shared as a link.
+
 ## Run it
 
 ```sh

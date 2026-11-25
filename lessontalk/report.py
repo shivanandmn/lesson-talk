@@ -15,8 +15,14 @@ E = html.escape
 CSS = """
 :root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#6b6a66;--line:#e4e1da;--card:#fff;
 --t:#c2562b;--p:#2f6f8f;--warn:#8a5a00;--wbg:#fff6df}
-@media (prefers-color-scheme:dark){:root{--bg:#181816;--fg:#ecebe7;--mut:#a09e98;
---line:#34332f;--card:#22211e;--t:#e07a4f;--p:#5fa3c4;--warn:#f0c060;--wbg:#3a2f12}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#181816;
+--fg:#ecebe7;--mut:#a09e98;--line:#34332f;--card:#22211e;--t:#e07a4f;--p:#5fa3c4;
+--warn:#f0c060;--wbg:#3a2f12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#181816;--fg:#ecebe7;--mut:#a09e98;--line:#34332f;
+--card:#22211e;--t:#e07a4f;--p:#5fa3c4;--warn:#f0c060;--wbg:#3a2f12;color-scheme:dark}
+.chip{font-size:13px;border:1px solid var(--line);background:var(--card);
+border-radius:8px;padding:6px 10px}
+.chip .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);
 font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -147,6 +153,20 @@ def _trend(hist: list[dict], lid: str) -> str:
 
 def card(m: dict, r: dict, hist: list[dict], setup: dict,
          audio_file: str | None = None) -> str:
+    body, js = card_parts(m, r, hist, setup, audio_file)
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{E(m["label"])} · lesson talk</title><style>{CSS}</style></head><body><main>
+{body}
+<script>{js}</script>
+</main></body></html>"""
+
+
+def card_parts(m: dict, r: dict, hist: list[dict], setup: dict,
+               audio_file: str | None = None,
+               no_audio_note: str | None = None) -> tuple[str, str]:
+    """The card's body HTML and its script, for embedding in another page.
+    With no audio, listening controls become plain timestamps."""
     t1, t2 = r["tier1"], r["tier2"]
     share = t1["teacher_share"]
     sp = t1["teacher_s"] + t1["pupil_s"]
@@ -172,16 +192,25 @@ def card(m: dict, r: dict, hist: list[dict], setup: dict,
 
     warn = "".join(f'<div class="warn">{E(w)}</div>' for w in r["warnings"])
 
+    has_audio = bool(audio_file) and not m.get("audio_deleted")
+
     def jumps(items, colour, what):
+        if not has_audio:
+            return "".join(
+                f'<span class="chip"><span class="dot" style="background:'
+                f'var({colour})"></span>{mmss(x["start_s"])} · {what} '
+                f'{mmss(x["dur_s"])}</span>' for x in items)
         return "".join(
             f'<button class="j" data-t="{x["start_s"]}"><span class="dot" '
             f'style="background:var({colour})"></span>{mmss(x["start_s"])} · '
             f'{what} {mmss(x["dur_s"])}</button>' for x in items)
 
     player = ""
-    if audio_file and not m.get("audio_deleted"):
+    if has_audio:
         player = (f'<audio id="au" controls preload="metadata" '
                   f'src="{E(audio_file)}"></audio>')
+    elif no_audio_note:
+        player = f'<p class="sub">{E(no_audio_note)}</p>'
     else:
         player = ('<p class="sub">The recording has been deleted; the numbers '
                   'above were kept.</p>')
@@ -206,10 +235,8 @@ if(au&&ph){au.ontimeupdate=()=>{const x=au.currentTime/DUR*800;
 ph.setAttribute('x1',x);ph.setAttribute('x2',x);ph.setAttribute('opacity',1);};}
 """.replace("DUR", str(dur))
 
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{E(m["label"])} · lesson talk</title><style>{CSS}</style></head><body><main>
-<h1>{E(m["label"])}{badge}</h1>
+    listen_hint = " · click anywhere to listen from there" if has_audio else ""
+    body = f"""<h1>{E(m["label"])}{badge}</h1>
 <div class="sub">{E(m["group"])} · {E(m["recorded_on"])} · {mmss(dur)} recorded ·
 {E(setup.get("name", m["setup"]))}</div>
 {warn}
@@ -230,7 +257,7 @@ background:var(--p)"></i></div>
 <h2>Across the lesson</h2>
 <div class="tl">{_timeline(r)}
 <div class="legend" style="margin-top:6px"><b style="background:var(--t)"></b>teacher
-<b style="background:var(--p)"></b>pupils · click anywhere to listen from there</div>
+<b style="background:var(--p)"></b>pupils{listen_hint}</div>
 {player}</div>
 
 <h2>Measures</h2>
@@ -269,9 +296,8 @@ transcribed and nothing left this computer.</li>
 <li>Not measured: wait time, questions, pupil names, engagement, or teaching
 quality. Pause counts ({t2['pauses_over_3s']} pauses of 3 s or more) are
 over-reported by this method and are shown only here.</li>
-</ul>
-<script>{js}</script>
-</main></body></html>"""
+</ul>"""
+    return body, (js if has_audio else "")
 
 
 def as_json(r: dict) -> str:
