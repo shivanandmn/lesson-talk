@@ -1,0 +1,1495 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "base",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"text": {
+			"ctx": 448,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"mels": 80,
+		"ftype": 9
+	},
+	"params": {
+		"model": "models/ggml-base.en-q5_1.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:21,600"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 21600
+			},
+			"text": " Okay, so this is our first meeting of this design project and I'd like to show you the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:21,600",
+				"to": "00:00:32,520"
+			},
+			"offsets": {
+				"from": 21600,
+				"to": 32520
+			},
+			"text": " agenda for the meeting. I don't know if it was sent round to all of you. This is the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,520",
+				"to": "00:00:41,380"
+			},
+			"offsets": {
+				"from": 32520,
+				"to": 41380
+			},
+			"text": " plan for today's meeting is firstly just to introduce the project briefly although I'm"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:41,380",
+				"to": "00:00:47,240"
+			},
+			"offsets": {
+				"from": 41380,
+				"to": 47240
+			},
+			"text": " sure you've actually got some of the information already. Then the main purpose is to so that"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:47,240",
+				"to": "00:00:54,120"
+			},
+			"offsets": {
+				"from": 47240,
+				"to": 54120
+			},
+			"text": " we get to know each other a little bit more. Then we want to practice using some of the"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:54,120",
+				"to": "00:01:00,480"
+			},
+			"offsets": {
+				"from": 54120,
+				"to": 60480
+			},
+			"text": " tools that we'll be using during the course of the design project and the meetings, specifically"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:00,480",
+				"to": "00:01:10,680"
+			},
+			"offsets": {
+				"from": 60480,
+				"to": 70680
+			},
+			"text": " the whiteboard over there. Then we need to go through the specifics of our project plan"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:10,680",
+				"to": "00:01:19,280"
+			},
+			"offsets": {
+				"from": 70680,
+				"to": 79280
+			},
+			"text": " and discuss, come up with some preliminary ideas about it, and then that's it. So we've got"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:19,280",
+				"to": "00:01:35,120"
+			},
+			"offsets": {
+				"from": 79280,
+				"to": 95120
+			},
+			"text": " 25 minutes to do that. That's until 11.25. So any questions? Not at this point. So this"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:35,120",
+				"to": "00:01:44,580"
+			},
+			"offsets": {
+				"from": 95120,
+				"to": 104580
+			},
+			"text": " is our project. What we're aiming to do is to create a new remote control for a television."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:44,580",
+				"to": "00:01:53,560"
+			},
+			"offsets": {
+				"from": 104580,
+				"to": 113560
+			},
+			"text": " We want it to be something original, something trendy and also something user friendly. So"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:53,560",
+				"to": "00:02:21,280"
+			},
+			"offsets": {
+				"from": 113560,
+				"to": 141280
+			},
+			"text": " it has to be quite intuitive that people are able to use this product. The method that"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:21,280",
+				"to": "00:02:32,320"
+			},
+			"offsets": {
+				"from": 141280,
+				"to": 152320
+			},
+			"text": " we're going to use to complete the project has three components as such. There's the functional"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:32,320",
+				"to": "00:02:42,440"
+			},
+			"offsets": {
+				"from": 152320,
+				"to": 162440
+			},
+			"text": " design of the remote control. The way we'll do that I think is to work individually and"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:42,440",
+				"to": "00:02:52,320"
+			},
+			"offsets": {
+				"from": 162440,
+				"to": 172320
+			},
+			"text": " then come together for meetings to work on that. Similarly with the conceptual design,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:52,320",
+				"to": "00:02:58,760"
+			},
+			"offsets": {
+				"from": 172320,
+				"to": 178760
+			},
+			"text": " we'll start off by working individually with our own expertise on our own laptops and then"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:58,760",
+				"to": "00:03:06,520"
+			},
+			"offsets": {
+				"from": 178760,
+				"to": 186520
+			},
+			"text": " we'll bring what we've done together. Then the detailed design will come after that. We'll"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:06,520",
+				"to": "00:03:12,760"
+			},
+			"offsets": {
+				"from": 186520,
+				"to": 192760
+			},
+			"text": " pull it all together. I'm a bit confused about what's the difference between the functional"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:12,760",
+				"to": "00:03:21,880"
+			},
+			"offsets": {
+				"from": 192760,
+				"to": 201880
+			},
+			"text": " design and conceptual design. Is it just more detail? I think we're talking that the functional"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:21,880",
+				"to": "00:03:31,360"
+			},
+			"offsets": {
+				"from": 201880,
+				"to": 211360
+			},
+			"text": " design is more your area of things where you'll be, we want to look at what functions we need"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:31,360",
+				"to": "00:03:37,880"
+			},
+			"offsets": {
+				"from": 211360,
+				"to": 217880
+			},
+			"text": " in the remote control and what specific things it has to do. But the conceptual design is"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:37,880",
+				"to": "00:03:49,260"
+			},
+			"offsets": {
+				"from": 217880,
+				"to": 229260
+			},
+			"text": " perhaps bigger than that and includes how people are going to use it and that kind of thing."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:49,260",
+				"to": "00:03:55,640"
+			},
+			"offsets": {
+				"from": 229260,
+				"to": 235640
+			},
+			"text": " Where do we identify the components of our product? I think it's in the conceptual design"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:55,640",
+				"to": "00:04:07,880"
+			},
+			"offsets": {
+				"from": 235640,
+				"to": 247880
+			},
+			"text": " phase that we identify the components of our product. I think we'll start that initially"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:07,880",
+				"to": "00:04:24,920"
+			},
+			"offsets": {
+				"from": 247880,
+				"to": 264920
+			},
+			"text": " with the functional design. That's just a brief overview of the project itself. What I'd"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:24,920",
+				"to": "00:04:33,400"
+			},
+			"offsets": {
+				"from": 264920,
+				"to": 273400
+			},
+			"text": " like us to do now is simultaneously introduce ourselves and start using some of the tools"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:33,400",
+				"to": "00:04:43,680"
+			},
+			"offsets": {
+				"from": 273400,
+				"to": 283680
+			},
+			"text": " that we're using for the project, specifically the whiteboard. So each person in turn, I'd"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:43,680",
+				"to": "00:04:51,680"
+			},
+			"offsets": {
+				"from": 283680,
+				"to": 291680
+			},
+			"text": " like us to go up to the whiteboard, the pens just underneath it there and draw your favourite"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:51,680",
+				"to": "00:04:57,640"
+			},
+			"offsets": {
+				"from": 291680,
+				"to": 297640
+			},
+			"text": " animal and then tell everyone what your favourite characteristics of that animal are and while"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:57,640",
+				"to": "00:05:03,860"
+			},
+			"offsets": {
+				"from": 297640,
+				"to": 303860
+			},
+			"text": " you're doing that, tell us your name, what your role is and perhaps how your animal relates"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:03,860",
+				"to": "00:05:06,180"
+			},
+			"offsets": {
+				"from": 303860,
+				"to": 306180
+			},
+			"text": " to the role that you're taking in this project."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:06,180",
+				"to": "00:05:11,440"
+			},
+			"offsets": {
+				"from": 306180,
+				"to": 311440
+			},
+			"text": " No, you're making it mean."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:11,440",
+				"to": "00:05:19,520"
+			},
+			"offsets": {
+				"from": 311440,
+				"to": 319520
+			},
+			"text": " Would you like to go first? Do I have a choice? Okay, oh, thanks for all of you, right."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:19,520",
+				"to": "00:05:31,160"
+			},
+			"offsets": {
+				"from": 319520,
+				"to": 331160
+			},
+			"text": " I'll put the in-pockets. Cool. You don't have to hurry, we've got plenty of time."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:31,160",
+				"to": "00:05:51,400"
+			},
+			"offsets": {
+				"from": 331160,
+				"to": 351400
+			},
+			"text": " So, my name's Kat and I'm really not very good at this whole drawing when I say. There we"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:51,400",
+				"to": "00:06:19,280"
+			},
+			"offsets": {
+				"from": 351400,
+				"to": 379280
+			},
+			"text": " are. Okay, cool. This is a wrap-up. At first I thought it was going to be Kat. Yeah, I don't"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:19,280",
+				"to": "00:06:27,640"
+			},
+			"offsets": {
+				"from": 379280,
+				"to": 387640
+			},
+			"text": " think it's fair enough. No, I understand. I can see by that use. It's a fluffy rabbit."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:27,640",
+				"to": "00:06:38,240"
+			},
+			"offsets": {
+				"from": 387640,
+				"to": 398240
+			},
+			"text": " Blue, rabbit's ain't coming blue, but you need. I like it because it's small and it's"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:38,240",
+				"to": "00:06:46,000"
+			},
+			"offsets": {
+				"from": 398240,
+				"to": 406000
+			},
+			"text": " fluffy and one day you'll be able to genetically modify them and they will come in pink. Excellent."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:46,000",
+				"to": "00:06:51,440"
+			},
+			"offsets": {
+				"from": 406000,
+				"to": 411440
+			},
+			"text": " So, what's your role within the team? I am the, I need my notebook."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:51,440",
+				"to": "00:07:03,180"
+			},
+			"offsets": {
+				"from": 411440,
+				"to": 423180
+			},
+			"text": " Top banana. Thank you. Okay, cool. I am the marketing expert. So, like, I'm going to be"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:03,180",
+				"to": "00:07:08,200"
+			},
+			"offsets": {
+				"from": 423180,
+				"to": 428200
+			},
+			"text": " doing the apparently according to the little guy on the computer that knows everything."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:08,200",
+				"to": "00:07:14,640"
+			},
+			"offsets": {
+				"from": 428200,
+				"to": 434640
+			},
+			"text": " The user requirements specification of the functional design, trend watching in the conceptual"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:14,640",
+				"to": "00:07:23,680"
+			},
+			"offsets": {
+				"from": 434640,
+				"to": 443680
+			},
+			"text": " design and product evaluation in the detailed design. Yeah. And more about yourself. You're"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:23,680",
+				"to": "00:07:36,480"
+			},
+			"offsets": {
+				"from": 443680,
+				"to": 456480
+			},
+			"text": " from, I'm from Leicester. Second year. What else do you want to move? I like sport. Yeah,"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:36,480",
+				"to": "00:07:49,320"
+			},
+			"offsets": {
+				"from": 456480,
+				"to": 469320
+			},
+			"text": " aerobics, kickboxing, spinning. But not with rabbits. No, and vets. I like vets as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:49,320",
+				"to": "00:08:06,600"
+			},
+			"offsets": {
+				"from": 469320,
+				"to": 486600
+			},
+			"text": " And yeah. And I like cocktails, especially pink ones. Okay. It's cool to match the rabbit."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:06,600",
+				"to": "00:08:20,120"
+			},
+			"offsets": {
+				"from": 486600,
+				"to": 500120
+			},
+			"text": " So, my name is Marika. There's the pen. If you have not enough room, there's a new razor"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:20,120",
+				"to": "00:08:27,400"
+			},
+			"offsets": {
+				"from": 500120,
+				"to": 507400
+			},
+			"text": " there and you can make it smaller. So, I'm the interface designer in this project. And my"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:27,400",
+				"to": "00:08:34,160"
+			},
+			"offsets": {
+				"from": 507400,
+				"to": 514160
+			},
+			"text": " favourite animal, I mean, I'm not so sure because I'm not so, so very familiar with all kinds"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:34,160",
+				"to": "00:08:45,640"
+			},
+			"offsets": {
+				"from": 514160,
+				"to": 525640
+			},
+			"text": " of animals, but I do like dogs. Oh, sorry. Maybe I shouldn't have said it beforehand. Well,"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:45,640",
+				"to": "00:09:11,880"
+			},
+			"offsets": {
+				"from": 525640,
+				"to": 551880
+			},
+			"text": " there are different kinds of dogs. Maybe it has some colorful patches. I do like dogs because"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:11,880",
+				"to": "00:09:23,600"
+			},
+			"offsets": {
+				"from": 551880,
+				"to": 563600
+			},
+			"text": " they are good friends. Two people and they are loyal. Well, as compared to small animals,"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:23,600",
+				"to": "00:09:32,600"
+			},
+			"offsets": {
+				"from": 563600,
+				"to": 572600
+			},
+			"text": " like cats, they are really much more fun because they are not so independent. Yeah. Maybe the"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:32,600",
+				"to": "00:09:40,320"
+			},
+			"offsets": {
+				"from": 572600,
+				"to": 580320
+			},
+			"text": " fact that they protect their home as well. Yeah. What it has to do with my role in the"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:40,320",
+				"to": "00:09:49,360"
+			},
+			"offsets": {
+				"from": 580320,
+				"to": 589360
+			},
+			"text": " project is hard to say. I hope to be loyal to the project and not to let people doing"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:49,360",
+				"to": "00:09:55,440"
+			},
+			"offsets": {
+				"from": 589360,
+				"to": 595440
+			},
+			"text": " similar projects know the details of our project or something. Yeah. Where are you from? I'm"
+		},
+		{
+			"timestamps": {
+				"from": "00:09:55,440",
+				"to": "00:10:05,480"
+			},
+			"offsets": {
+				"from": 595440,
+				"to": 605480
+			},
+			"text": " from Estonia. Yep. So, is there anything else you'd like to know? Oh, right. My role. So,"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:05,480",
+				"to": "00:10:17,080"
+			},
+			"offsets": {
+				"from": 605480,
+				"to": 617080
+			},
+			"text": " in the different stages of the design, at first, I will be responsible for designing the technical"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:17,080",
+				"to": "00:10:29,200"
+			},
+			"offsets": {
+				"from": 617080,
+				"to": 629200
+			},
+			"text": " functions of the remote control. Then in the conceptual design stage, I need to come up"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:29,200",
+				"to": "00:10:37,880"
+			},
+			"offsets": {
+				"from": 629200,
+				"to": 637880
+			},
+			"text": " with interface concept. Then in the last stage, I will be responsible for the user interface"
+		},
+		{
+			"timestamps": {
+				"from": "00:10:37,880",
+				"to": "00:11:02,880"
+			},
+			"offsets": {
+				"from": 637880,
+				"to": 662880
+			},
+			"text": " design. Okay. I'll do some. I'll wrap the features of the drawings too. My name is Gorov."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:02,880",
+				"to": "00:11:18,120"
+			},
+			"offsets": {
+				"from": 662880,
+				"to": 678120
+			},
+			"text": " My favorite animal. One of my favorite animals is a cow. I've got no idea how to draw. Good"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:18,120",
+				"to": "00:11:26,400"
+			},
+			"offsets": {
+				"from": 678120,
+				"to": 686400
+			},
+			"text": " luck. This is going to be... They're not just like a big round body and then some really"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:26,400",
+				"to": "00:11:37,100"
+			},
+			"offsets": {
+				"from": 686400,
+				"to": 697100
+			},
+			"text": " skinny legs. Okay. So, let me draw the body first. Big round body legs. And then put a"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:37,100",
+				"to": "00:11:49,120"
+			},
+			"offsets": {
+				"from": 697100,
+				"to": 709120
+			},
+			"text": " long tail on the long face. It looks like you. There is some grass there. This is what I like"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:49,120",
+				"to": "00:11:58,600"
+			},
+			"offsets": {
+				"from": 709120,
+				"to": 718600
+			},
+			"text": " about. It just keeps sitting there eating grass that do not disturb anybody. They're kind"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:58,600",
+				"to": "00:12:11,960"
+			},
+			"offsets": {
+				"from": 718600,
+				"to": 731960
+			},
+			"text": " of put this in a way. So, yeah, I like cows. My role in the project is industrial designer."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:11,960",
+				"to": "00:12:19,920"
+			},
+			"offsets": {
+				"from": 731960,
+				"to": 739920
+			},
+			"text": " So, I'm supposed to design all the details of the product, how it works and whatever"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:19,920",
+				"to": "00:12:24,000"
+			},
+			"offsets": {
+				"from": 739920,
+				"to": 744000
+			},
+			"text": " it will take during the functional role, what are the various functions that have to be"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:24,000",
+				"to": "00:12:32,000"
+			},
+			"offsets": {
+				"from": 744000,
+				"to": 752000
+			},
+			"text": " performed by it during the conceptual design, what are the various components of it. And"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:32,000",
+				"to": "00:12:38,720"
+			},
+			"offsets": {
+				"from": 752000,
+				"to": 758720
+			},
+			"text": " finally, I'm not to sure what was the last part. The detailed design, I guess it will"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:38,720",
+				"to": "00:12:45,760"
+			},
+			"offsets": {
+				"from": 758720,
+				"to": 765760
+			},
+			"text": " again be the identification of the components and how they integrate with each other. I'm"
+		},
+		{
+			"timestamps": {
+				"from": "00:12:45,760",
+				"to": "00:12:52,520"
+			},
+			"offsets": {
+				"from": 765760,
+				"to": 772520
+			},
+			"text": " from India. I'm doing my PhD in the psycholinguistics. I sit up at the Department of Psychology."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:52,520",
+				"to": "00:13:13,680"
+			},
+			"offsets": {
+				"from": 772520,
+				"to": 793680
+			},
+			"text": " Thank you. Thanks. Right. Now it's my turn. Obviously. Okay. This is a little bit of color."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:13,680",
+				"to": "00:13:23,920"
+			},
+			"offsets": {
+				"from": 793680,
+				"to": 803920
+			},
+			"text": " It looks really very cute. I like dogs too, but I can't do that already because I can't"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:23,920",
+				"to": "00:13:47,240"
+			},
+			"offsets": {
+				"from": 803920,
+				"to": 827240
+			},
+			"text": " talk as well as you can. I like... Is that a lizard? No way."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:47,240",
+				"to": "00:14:03,640"
+			},
+			"offsets": {
+				"from": 827240,
+				"to": 843640
+			},
+			"text": " Wow. It's a gecko. Oh, a gecko. Okay. Yeah. Is there a difference? Are they also like"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:03,640",
+				"to": "00:14:10,200"
+			},
+			"offsets": {
+				"from": 843640,
+				"to": 850200
+			},
+			"text": " lizards or are they? Yeah, they are kind of lizard. And I like geckos because they remind"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:10,200",
+				"to": "00:14:18,680"
+			},
+			"offsets": {
+				"from": 850200,
+				"to": 858680
+			},
+			"text": " me of warm places and where I was living. In Cambodia, they used to live in my house and"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:18,680",
+				"to": "00:14:23,400"
+			},
+			"offsets": {
+				"from": 858680,
+				"to": 863400
+			},
+			"text": " they were on the ceiling and they would make little gecko noises. I hope you don't like"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:23,400",
+				"to": "00:14:31,200"
+			},
+			"offsets": {
+				"from": 863400,
+				"to": 871200
+			},
+			"text": " snakes, do you? I don't like snakes. Okay. We have nasty snakes. That's where I'm from."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:31,200",
+				"to": "00:14:42,960"
+			},
+			"offsets": {
+				"from": 871200,
+				"to": 882960
+			},
+			"text": " I'm from Melbourne and I'm your project manager for today. And my role is basically to keep"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:42,960",
+				"to": "00:14:50,200"
+			},
+			"offsets": {
+				"from": 882960,
+				"to": 890200
+			},
+			"text": " things going and make sure that you all work together in a productive way so that by the"
+		},
+		{
+			"timestamps": {
+				"from": "00:14:50,200",
+				"to": "00:15:07,080"
+			},
+			"offsets": {
+				"from": 890200,
+				"to": 907080
+			},
+			"text": " end of the day, we come up with a great product. Wonderful. Okay. So, let's see what's next"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:07,080",
+				"to": "00:15:17,560"
+			},
+			"offsets": {
+				"from": 907080,
+				"to": 917560
+			},
+			"text": " in the PowerPoint presentation. I've just thought about this that we could even put it"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:17,560",
+				"to": "00:15:30,600"
+			},
+			"offsets": {
+				"from": 917560,
+				"to": 930600
+			},
+			"text": " much more professionally. There we go. Okay. So, this is the overall budget for our project."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:30,600",
+				"to": "00:15:46,640"
+			},
+			"offsets": {
+				"from": 930600,
+				"to": 946640
+			},
+			"text": " We've got, we're planning to sell these remote controls for 25 euros each. And with that,"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:46,640",
+				"to": "00:15:53,840"
+			},
+			"offsets": {
+				"from": 946640,
+				"to": 953840
+			},
+			"text": " we're aiming for a profit of 50 million euros. And that's selling them on the international"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:53,840",
+				"to": "00:16:03,880"
+			},
+			"offsets": {
+				"from": 953840,
+				"to": 963880
+			},
+			"text": " market, not just in the UK. So, to do that, our finance people estimate that we need"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:03,880",
+				"to": "00:16:31,720"
+			},
+			"offsets": {
+				"from": 963880,
+				"to": 991720
+			},
+			"text": " production costs of maximum 12.5 euros so that we can reach that profit target. So that's"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:31,720",
+				"to": "00:16:50,840"
+			},
+			"offsets": {
+				"from": 991720,
+				"to": 1010840
+			},
+			"text": " something to keep in mind where we're designing. Okay. Let me just skip ahead to see. Okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:16:50,840",
+				"to": "00:16:56,680"
+			},
+			"offsets": {
+				"from": 1010840,
+				"to": 1016680
+			},
+			"text": " We've only got a couple of minutes. Does anyone have any first ideas to bounce around"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:56,680",
+				"to": "00:17:04,220"
+			},
+			"offsets": {
+				"from": 1016680,
+				"to": 1024220
+			},
+			"text": " about what we're thinking of this remote control? I'm just wondering whether there is like any"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:04,220",
+				"to": "00:17:10,920"
+			},
+			"offsets": {
+				"from": 1024220,
+				"to": 1030920
+			},
+			"text": " special feature that we want to have, want this remote control have as opposed to the"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:10,920",
+				"to": "00:17:24,240"
+			},
+			"offsets": {
+				"from": 1030920,
+				"to": 1044240
+			},
+			"text": " already existing ones. I think that's probably something that it's best if we take away with"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:24,240",
+				"to": "00:17:30,000"
+			},
+			"offsets": {
+				"from": 1044240,
+				"to": 1050000
+			},
+			"text": " this. But if we all have a think when we go away from the meeting, what specific things"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:30,000",
+				"to": "00:17:38,360"
+			},
+			"offsets": {
+				"from": 1050000,
+				"to": 1058360
+			},
+			"text": " could be included in this remote control? I think in the beginning, one thing was that"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:38,360",
+				"to": "00:17:46,840"
+			},
+			"offsets": {
+				"from": 1058360,
+				"to": 1066840
+			},
+			"text": " was mentioned was that it should be trendy, user friendly and original. So I think your"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:46,840",
+				"to": "00:17:50,680"
+			},
+			"offsets": {
+				"from": 1066840,
+				"to": 1070680
+			},
+			"text": " point is relevant as far as the originality is concerned that we should provide some features"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:50,680",
+				"to": "00:17:56,680"
+			},
+			"offsets": {
+				"from": 1070680,
+				"to": 1076680
+			},
+			"text": " that are quite unique to this. Yeah, I was looking at the website and the other things"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:56,680",
+				"to": "00:18:03,000"
+			},
+			"offsets": {
+				"from": 1076680,
+				"to": 1083000
+			},
+			"text": " that they've made and I like put down some like inspirational words like that I got from"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:03,000",
+				"to": "00:18:09,560"
+			},
+			"offsets": {
+				"from": 1083000,
+				"to": 1089560
+			},
+			"text": " looking at the pictures. So the motto is we put the fashion in electronics. And so it's"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:09,560",
+				"to": "00:18:14,800"
+			},
+			"offsets": {
+				"from": 1089560,
+				"to": 1094800
+			},
+			"text": " something that is sleek and stylish but it is still functional. You know, so I'm kind"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:14,800",
+				"to": "00:18:21,600"
+			},
+			"offsets": {
+				"from": 1094800,
+				"to": 1101600
+			},
+			"text": " of thinking, you know, like those phones that they have, the new generation ones where they"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:21,600",
+				"to": "00:18:26,600"
+			},
+			"offsets": {
+				"from": 1101600,
+				"to": 1106600
+			},
+			"text": " don't actually have any buttons on them and stuff like that. So it's a thing heading towards"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:26,600",
+				"to": "00:18:31,520"
+			},
+			"offsets": {
+				"from": 1106600,
+				"to": 1111520
+			},
+			"text": " that so it's not only, I mean, I don't know what almost the button do on my remote controls,"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:31,520",
+				"to": "00:18:40,060"
+			},
+			"offsets": {
+				"from": 1111520,
+				"to": 1120060
+			},
+			"text": " but I figure how many do you need? So perhaps I'm sort of menu based thing or something that's"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:40,060",
+				"to": "00:18:44,760"
+			},
+			"offsets": {
+				"from": 1120060,
+				"to": 1124760
+			},
+			"text": " a little less crowded than it's like, I mean, you know, theoretically, you can do all kinds"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:44,760",
+				"to": "00:18:48,960"
+			},
+			"offsets": {
+				"from": 1124760,
+				"to": 1128960
+			},
+			"text": " of things with your TV, right? But what do most people do? They turn it on, they watch"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:48,960",
+				"to": "00:18:53,380"
+			},
+			"offsets": {
+				"from": 1128960,
+				"to": 1133380
+			},
+			"text": " certain specified channels, you know, and then they turn it off again. There is a lot"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:53,380",
+				"to": "00:18:58,680"
+			},
+			"offsets": {
+				"from": 1133380,
+				"to": 1138680
+			},
+			"text": " of functionality in there that is not used 90% of the time. Yeah. So we used 10% of the"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:58,680",
+				"to": "00:19:03,500"
+			},
+			"offsets": {
+				"from": 1138680,
+				"to": 1143500
+			},
+			"text": " time. There's no need to have buttons on it to do that. Maybe it could be one button for"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:03,500",
+				"to": "00:19:07,920"
+			},
+			"offsets": {
+				"from": 1143500,
+				"to": 1147920
+			},
+			"text": " a menu or something. Yeah. And then use that. So if you're the kind of side case that knows"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:07,920",
+				"to": "00:19:12,420"
+			},
+			"offsets": {
+				"from": 1147920,
+				"to": 1152420
+			},
+			"text": " how your mic control works, then, you know, that's fine. And you can do it on the screen"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:12,420",
+				"to": "00:19:17,660"
+			},
+			"offsets": {
+				"from": 1152420,
+				"to": 1157660
+			},
+			"text": " rather than everybody else having to have those buttons, which is confusing."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:17,660",
+				"to": "00:19:23,940"
+			},
+			"offsets": {
+				"from": 1157660,
+				"to": 1163940
+			},
+			"text": " Excellent. Because like if you look at the train, it's just very like, there's no extra"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:23,940",
+				"to": "00:19:29,900"
+			},
+			"offsets": {
+				"from": 1163940,
+				"to": 1169900
+			},
+			"text": " bits on it, the train on the website. I don't know. I haven't had a look yet. But it is just"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:29,900",
+				"to": "00:19:40,940"
+			},
+			"offsets": {
+				"from": 1169900,
+				"to": 1180940
+			},
+			"text": " like a long, like thing used to be moving people, but it looks really pretty to you. Great. Any"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:40,940",
+				"to": "00:19:51,900"
+			},
+			"offsets": {
+				"from": 1180940,
+				"to": 1191900
+			},
+			"text": " other immediate thoughts? We can aim for, I mean, we can think about all these little"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:51,900",
+				"to": "00:19:55,900"
+			},
+			"offsets": {
+				"from": 1191900,
+				"to": 1195900
+			},
+			"text": " things, but we can aim for something with that gives a high battery life. Although I don't"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:55,900",
+				"to": "00:20:01,420"
+			},
+			"offsets": {
+				"from": 1195900,
+				"to": 1201420
+			},
+			"text": " think that it's a huge problem for remote controls and battery life. Every now and then"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:01,420",
+				"to": "00:20:11,380"
+			},
+			"offsets": {
+				"from": 1201420,
+				"to": 1211380
+			},
+			"text": " you need to replace the batteries. Yeah. But I mean, even though it has to be original,"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:11,380",
+				"to": "00:20:17,060"
+			},
+			"offsets": {
+				"from": 1211380,
+				"to": 1217060
+			},
+			"text": " we shouldn't go like too far away from the usual ones because otherwise the new users"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:17,060",
+				"to": "00:20:25,580"
+			},
+			"offsets": {
+				"from": 1217060,
+				"to": 1225580
+			},
+			"text": " will just have a lot of problems with learning. Yeah. So it should kind of fit in as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:25,580",
+				"to": "00:20:32,700"
+			},
+			"offsets": {
+				"from": 1225580,
+				"to": 1232700
+			},
+			"text": " Like this fancy website. Teter type of a, yeah. You can't access because you have no idea"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:32,700",
+				"to": "00:20:39,580"
+			},
+			"offsets": {
+				"from": 1232700,
+				"to": 1239580
+			},
+			"text": " how to get in, but the design is not very good. Okay. So we need to wrap it up now so that we"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:39,580",
+				"to": "00:20:49,220"
+			},
+			"offsets": {
+				"from": 1239580,
+				"to": 1249220
+			},
+			"text": " can go away and get on with some of this. We've got another meeting in 30 minutes. So you'll"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:49,220",
+				"to": "00:20:55,580"
+			},
+			"offsets": {
+				"from": 1249220,
+				"to": 1255580
+			},
+			"text": " be getting specific instructions once you go back to your workspace. Basically, you're"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:55,580",
+				"to": "00:21:04,220"
+			},
+			"offsets": {
+				"from": 1255580,
+				"to": 1264220
+			},
+			"text": " looking at the working design. You're looking at the technical functions design. And for"
+		},
+		{
+			"timestamps": {
+				"from": "00:21:04,220",
+				"to": "00:21:13,780"
+			},
+			"offsets": {
+				"from": 1264220,
+				"to": 1273780
+			},
+			"text": " you, it's the user requirements specification. Like I said, okay. Okay. Thanks for that. Thank"
+		},
+		{
+			"timestamps": {
+				"from": "00:21:13,780",
+				"to": "00:21:20,300"
+			},
+			"offsets": {
+				"from": 1273780,
+				"to": 1280300
+			},
+			"text": " you. I'll see you in half an hour. See you. Carry the laptops back again. Do we need to"
+		},
+		{
+			"timestamps": {
+				"from": "00:21:20,300",
+				"to": "00:21:22,020"
+			},
+			"offsets": {
+				"from": 1280300,
+				"to": 1282020
+			},
+			"text": " unplug things? Probably."
+		}
+	]
+}

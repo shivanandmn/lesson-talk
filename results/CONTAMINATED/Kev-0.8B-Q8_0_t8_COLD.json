@@ -1,0 +1,122 @@
+{
+  "label": "Kev-0.8B-Q8_0_t8_COLD",
+  "models_endpoint": {
+    "models": [
+      {
+        "name": "models/Kev-0.8B-Q8_0.gguf",
+        "model": "models/Kev-0.8B-Q8_0.gguf",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "models/Kev-0.8B-Q8_0.gguf",
+        "aliases": [
+          "models/Kev-0.8B-Q8_0.gguf"
+        ],
+        "tags": [],
+        "object": "model",
+        "architecture": {
+          "input_modalities": [
+            "text"
+          ],
+          "output_modalities": [
+            "decisions"
+          ]
+        },
+        "created": 1795582747,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 248320,
+          "n_ctx": 8192,
+          "n_ctx_train": 262144,
+          "n_embd": 1024,
+          "n_params": 752917824,
+          "size": 801441024,
+          "ftype": "Q8_0"
+        }
+      }
+    ]
+  },
+  "reps": 5,
+  "warmup": 2,
+  "results": [
+    {
+      "n_questions": 1,
+      "input_tokens": 196,
+      "cold": true,
+      "reps": 5,
+      "ms_p50": 495.4,
+      "ms_p90": 550.6,
+      "ms_min": 485.3,
+      "ms_max": 583.6,
+      "ms_mean": 520.2,
+      "ms_per_question": 495.4,
+      "state_words": 90
+    },
+    {
+      "n_questions": 3,
+      "input_tokens": 536,
+      "cold": true,
+      "reps": 5,
+      "ms_p50": 1511.7,
+      "ms_p90": 1625.5,
+      "ms_min": 1443.5,
+      "ms_max": 1638.7,
+      "ms_mean": 1541.4,
+      "ms_per_question": 503.9,
+      "state_words": 90
+    },
+    {
+      "n_questions": 1,
+      "input_tokens": 440,
+      "cold": true,
+      "reps": 5,
+      "ms_p50": 1296.4,
+      "ms_p90": 1315.0,
+      "ms_min": 1245.1,
+      "ms_max": 1469.2,
+      "ms_mean": 1315.8,
+      "ms_per_question": 1296.4,
+      "state_words": 280
+    },
+    {
+      "n_questions": 3,
+      "input_tokens": 1268,
+      "cold": true,
+      "reps": 5,
+      "ms_p50": 3639.7,
+      "ms_p90": 3748.7,
+      "ms_min": 3625.5,
+      "ms_max": 3904.7,
+      "ms_mean": 3711.6,
+      "ms_per_question": 1213.2,
+      "state_words": 280
+    }
+  ],
+  "peak_rss_kb": 1910240,
+  "peak_rss_gib": 1.82
+}

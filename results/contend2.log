@@ -1,0 +1,46 @@
+### contention pass 2   started: 2026-11-25T13:09:19+05:30
+
+=== whisper solo t=20 ===
+    ggml-base.en-q5_1.bin t=20 wall=11.90s rtf=0.0361
+    ggml-small.en-q5_1.bin t=20 wall=27.92s rtf=0.0846
+
+=== kev solo t=4 ===
+  [kev_solo_t4] cold words~90 q=1 ...
+      196 tok -> p50 843.0 ms (843.0 ms/question)
+  wrote results/c2_kev_solo_t4.json
+
+=== kev solo t=20 ===
+  [kev_solo_t20] cold words~90 q=1 ...
+      196 tok -> p50 561.6 ms (561.6 ms/question)
+  wrote results/c2_kev_solo_t20.json
+
+=== long w_base_t4__k_t8 (kev t=8, whisper t=4, ggml-base.en-q5_1.bin, reps=150) ===
+  [w_base_t4__k_t8] cold words~90 q=1 ...
+      196 tok -> p50 1023.9 ms (1023.9 ms/question)
+  wrote results/c2_w_base_t4__k_t8.json
+    whisper runs completed: 7
+    whisper wall p50 20.34s  rtf 0.0616  n=7  min 19.44 max 20.95
+
+=== long w_base_t20__k_t20 (kev t=20, whisper t=20, ggml-base.en-q5_1.bin, reps=150) ===
+  [w_base_t20__k_t20] cold words~90 q=1 ...
+      196 tok -> p50 943.4 ms (943.4 ms/question)
+  wrote results/c2_w_base_t20__k_t20.json
+    whisper runs completed: 5
+    whisper wall p50 27.56s  rtf 0.0835  n=5  min 26.64 max 27.88
+
+=== long w_small_t4__k_t8 (kev t=8, whisper t=4, ggml-small.en-q5_1.bin, reps=200) ===
+  [w_small_t4__k_t8] cold words~90 q=1 ...
+      196 tok -> p50 1092.6 ms (1092.6 ms/question)
+  wrote results/c2_w_small_t4__k_t8.json
+    whisper runs completed: 4
+    whisper wall p50 54.94s  rtf 0.1665  n=4  min 51.87 max 55.68
+
+=== long w_small_t20__k_t20 (kev t=20, whisper t=20, ggml-small.en-q5_1.bin, reps=200) ===
+  [w_small_t20__k_t20] cold words~90 q=1 ...
+      196 tok -> p50 757.6 ms (757.6 ms/question)
+  wrote results/c2_w_small_t20__k_t20.json
+    whisper runs completed: 2
+    whisper wall p50 71.78s  rtf 0.2175  n=2  min 69.16 max 74.39
+
+=== PASS 2 COMPLETE ===
+2026-11-25T13:22:54+05:30

@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+# Start Lesson Talk:  ./lesson-talk            (opens the app in your browser)
+#                     ./lesson-talk report FILE.wav
+cd "$(dirname "$0")" || exit 1
+[ $# -eq 0 ] && set -- serve
+exec python3 -m lessontalk "$@"

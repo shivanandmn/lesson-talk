@@ -1,0 +1,98 @@
+{
+  "audio": "data/ami/audio/ES2006c.Mix-Headset.wav",
+  "vad": {
+    "span_s": 2181.7,
+    "speech_s": 1838.5,
+    "silence_s": 343.2,
+    "speech_ratio": 0.8427,
+    "n_turns": 121,
+    "turn_s_mean": 15.19,
+    "turn_s_p50": 7.14,
+    "turn_s_max": 267.17,
+    "turns_per_min": 3.33,
+    "n_speech_runs": 121,
+    "n_gaps": 120,
+    "gap_s_p50": 1.37,
+    "gaps_over_3s": 25
+  },
+  "gold": {
+    "span_s": 2181.7,
+    "speech_s": 2393.0,
+    "silence_s": 0.0,
+    "speech_ratio": 1.0968,
+    "n_turns": 496,
+    "turn_s_mean": 4.82,
+    "turn_s_p50": 1.6,
+    "turn_s_max": 52.43,
+    "turns_per_min": 13.64,
+    "n_speech_runs": 115,
+    "n_gaps": 114,
+    "gap_s_p50": 1.02,
+    "gaps_over_3s": 18,
+    "speakers": {
+      "A": {
+        "talk_s": 922.7,
+        "share": 0.3856,
+        "turns": 145
+      },
+      "B": {
+        "talk_s": 513.4,
+        "share": 0.2146,
+        "turns": 87
+      },
+      "C": {
+        "talk_s": 478.6,
+        "share": 0.2,
+        "turns": 182
+      },
+      "D": {
+        "talk_s": 478.2,
+        "share": 0.1998,
+        "turns": 82
+      }
+    },
+    "dominant_speaker": "A",
+    "dominant_share": 0.3856
+  },
+  "frame_agreement": {
+    "frames": 21817,
+    "accuracy": 0.9295045148278865,
+    "precision": 0.9931388438681794,
+    "recall": 0.9287157724562999,
+    "f1": 0.9598475355054303,
+    "iou": 0.922795040409618
+  },
+  "transfer": {
+    "margin_db": 3.4,
+    "frame": {
+      "frames": 21817,
+      "accuracy": 0.921483247009213,
+      "precision": 0.9658409908110268,
+      "recall": 0.7581935079190842,
+      "f1": 0.8495124308178863,
+      "iou": 0.7383934025656689
+    },
+    "measured_share": 0.2698529251789484,
+    "gold_share": 0.3855861834368736
+  },
+  "attribution": {
+    "auc": 0.9661157024793389,
+    "auc_ci95": [
+      0.9338842975206612,
+      0.9898071625344352
+    ],
+    "best_margin_db": 2.7,
+    "frame": {
+      "frames": 21817,
+      "accuracy": 0.939084200394188,
+      "precision": 0.9682745825602969,
+      "recall": 0.8184099106162772,
+      "f1": 0.8870570238803434,
+      "iou": 0.7970372632864997
+    },
+    "gold_share": 0.3855861834368736,
+    "measured_share": 0.2904510149468052,
+    "near": "data/ami/audio/ES2006c.Lapel-0.wav",
+    "far": "data/ami/audio/ES2006c.Array1-01.wav"
+  }
+}

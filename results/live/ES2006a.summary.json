@@ -1,0 +1,38 @@
+{
+  "meeting": "ES2006a",
+  "series": "ES2006",
+  "wer": {
+    "ref_words": 2806,
+    "hyp_words": 2204,
+    "sub": 284,
+    "del": 494,
+    "ins": 15,
+    "wer": 0.2826086956521739
+  },
+  "n_decision_spans": 1,
+  "label_rule_agreement": 1.0,
+  "gold_windows": 51,
+  "asr_windows": 43,
+  "gold_pos": 4,
+  "asr_pos": 3,
+  "aligned": 49,
+  "whisper_model": "models/ggml-base.en-q5_1.bin",
+  "prompt": "Does this excerpt contain a decision?",
+  "gold_auc": 0.324468085106383,
+  "gold_auc_ci95": [
+    0.09574468085106383,
+    0.601063829787234
+  ],
+  "gold_ms_p50": 335.7,
+  "asr_auc": 0.39166666666666666,
+  "asr_auc_ci95": [
+    0.15,
+    0.6166666666666667
+  ],
+  "asr_ms_p50": 375.6,
+  "paired": 49,
+  "pearson": 0.2869182548230958,
+  "spearman": 0.2701847631011968,
+  "mean_abs_score_diff": 0.09551062121835231,
+  "binary_agreement_at_0.5": 0.6122448979591837
+}

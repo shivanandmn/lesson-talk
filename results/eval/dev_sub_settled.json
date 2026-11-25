@@ -1,0 +1,92 @@
+{
+  "label": "ami_w90.dev.jsonl  prompt=settled",
+  "n": 153,
+  "positive_rate": 0.39215686274509803,
+  "baseline_accuracy": 0.607843137254902,
+  "auc": 0.5539426523297492,
+  "ms_p50": 327.7,
+  "sweep": [
+    {
+      "threshold": 0.3,
+      "tp": 48,
+      "fp": 67,
+      "fn": 12,
+      "tn": 26,
+      "accuracy": 0.48366013071895425,
+      "precision": 0.41739130434782606,
+      "recall": 0.8,
+      "specificity": 0.27956989247311825,
+      "f1": 0.5485714285714286,
+      "balanced_accuracy": 0.5397849462365591
+    },
+    {
+      "threshold": 0.4,
+      "tp": 29,
+      "fp": 36,
+      "fn": 31,
+      "tn": 57,
+      "accuracy": 0.5620915032679739,
+      "precision": 0.4461538461538462,
+      "recall": 0.48333333333333334,
+      "specificity": 0.6129032258064516,
+      "f1": 0.464,
+      "balanced_accuracy": 0.5481182795698925
+    },
+    {
+      "threshold": 0.5,
+      "tp": 12,
+      "fp": 13,
+      "fn": 48,
+      "tn": 80,
+      "accuracy": 0.6013071895424836,
+      "precision": 0.48,
+      "recall": 0.2,
+      "specificity": 0.8602150537634409,
+      "f1": 0.28235294117647064,
+      "balanced_accuracy": 0.5301075268817205
+    },
+    {
+      "threshold": 0.6,
+      "tp": 3,
+      "fp": 6,
+      "fn": 57,
+      "tn": 87,
+      "accuracy": 0.5882352941176471,
+      "precision": 0.3333333333333333,
+      "recall": 0.05,
+      "specificity": 0.9354838709677419,
+      "f1": 0.08695652173913045,
+      "balanced_accuracy": 0.49274193548387096
+    },
+    {
+      "threshold": 0.7,
+      "tp": 1,
+      "fp": 3,
+      "fn": 59,
+      "tn": 90,
+      "accuracy": 0.5947712418300654,
+      "precision": 0.25,
+      "recall": 0.016666666666666666,
+      "specificity": 0.967741935483871,
+      "f1": 0.03125,
+      "balanced_accuracy": 0.49220430107526886
+    }
+  ],
+  "best_f1_this_split": {
+    "threshold": 0.285,
+    "tp": 52,
+    "fp": 71,
+    "fn": 8,
+    "tn": 22,
+    "accuracy": 0.48366013071895425,
+    "precision": 0.42276422764227645,
+    "recall": 0.8666666666666667,
+    "specificity": 0.23655913978494625,
+    "f1": 0.5683060109289617,
+    "balanced_accuracy": 0.5516129032258065
+  },
+  "held_out_threshold": null,
+  "prompt": "Is a choice about the product being settled in this excerpt, rather than merely discussed?",
+  "prompt_key": "settled",
+  "split": "data/windows/ami_w90.dev.jsonl"
+}

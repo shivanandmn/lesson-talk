@@ -1,0 +1,97 @@
+{
+  "label": "m8_t8",
+  "models_endpoint": {
+    "models": [
+      {
+        "name": "models/Kev-4B-Q8_0.gguf",
+        "model": "models/Kev-4B-Q8_0.gguf",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "models/Kev-4B-Q8_0.gguf",
+        "aliases": [
+          "models/Kev-4B-Q8_0.gguf"
+        ],
+        "tags": [],
+        "object": "model",
+        "architecture": {
+          "input_modalities": [
+            "text"
+          ],
+          "output_modalities": [
+            "decisions"
+          ]
+        },
+        "created": 1795585125,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 248320,
+          "n_ctx": 8192,
+          "n_ctx_train": 262144,
+          "n_embd": 2560,
+          "n_params": 4207062528,
+          "size": 4472829952,
+          "ftype": "Q8_0"
+        }
+      }
+    ]
+  },
+  "reps": 5,
+  "warmup": 2,
+  "results": [
+    {
+      "n_questions": 1,
+      "input_tokens": 187,
+      "cold": false,
+      "reps": 5,
+      "ms_p50": 2663.2,
+      "ms_p90": 2784.3,
+      "ms_min": 2553.4,
+      "ms_max": 2989.1,
+      "ms_mean": 2719.4,
+      "ms_per_question": 2663.2,
+      "state_words": 90
+    },
+    {
+      "n_questions": 1,
+      "input_tokens": 431,
+      "cold": false,
+      "reps": 5,
+      "ms_p50": 6270.3,
+      "ms_p90": 6462.3,
+      "ms_min": 6058.3,
+      "ms_max": 6570.6,
+      "ms_mean": 6303.1,
+      "ms_per_question": 6270.3,
+      "state_words": 280
+    }
+  ],
+  "peak_rss_kb": 5696028,
+  "peak_rss_gib": 5.43,
+  "threads": 8
+}

@@ -1,0 +1,38 @@
+{
+  "meeting": "IS1001c",
+  "series": "IS1001",
+  "wer": {
+    "ref_words": 3481,
+    "hyp_words": 2731,
+    "sub": 485,
+    "del": 655,
+    "ins": 37,
+    "wer": 0.3381212295317437
+  },
+  "n_decision_spans": 11,
+  "label_rule_agreement": 1.0,
+  "gold_windows": 74,
+  "asr_windows": 52,
+  "gold_pos": 35,
+  "asr_pos": 26,
+  "aligned": 71,
+  "whisper_model": "models/ggml-base.en-q5_1.bin",
+  "prompt": "Does this excerpt contain a decision?",
+  "gold_auc": 0.4227106227106227,
+  "gold_auc_ci95": [
+    0.29084249084249086,
+    0.5545787545787546
+  ],
+  "gold_ms_p50": 334.8,
+  "asr_auc": 0.42011834319526625,
+  "asr_auc_ci95": [
+    0.26627218934911245,
+    0.5784023668639053
+  ],
+  "asr_ms_p50": 395.6,
+  "paired": 71,
+  "pearson": 0.4985618560641076,
+  "spearman": 0.4523356393507032,
+  "mean_abs_score_diff": 0.1066040426691189,
+  "binary_agreement_at_0.5": 0.7323943661971831
+}

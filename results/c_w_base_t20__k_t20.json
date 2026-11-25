@@ -1,0 +1,81 @@
+{
+  "label": "w_base_t20__k_t20",
+  "models_endpoint": {
+    "models": [
+      {
+        "name": "models/Kev-0.8B-Q8_0.gguf",
+        "model": "models/Kev-0.8B-Q8_0.gguf",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "models/Kev-0.8B-Q8_0.gguf",
+        "aliases": [
+          "models/Kev-0.8B-Q8_0.gguf"
+        ],
+        "tags": [],
+        "object": "model",
+        "architecture": {
+          "input_modalities": [
+            "text"
+          ],
+          "output_modalities": [
+            "decisions"
+          ]
+        },
+        "created": 1795592285,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 248320,
+          "n_ctx": 8192,
+          "n_ctx_train": 262144,
+          "n_embd": 1024,
+          "n_params": 752917824,
+          "size": 801441024,
+          "ftype": "Q8_0"
+        }
+      }
+    ]
+  },
+  "reps": 20,
+  "warmup": 2,
+  "results": [
+    {
+      "n_questions": 1,
+      "input_tokens": 196,
+      "cold": true,
+      "reps": 20,
+      "ms_p50": 720.8,
+      "ms_p90": 1022.3,
+      "ms_min": 669.2,
+      "ms_max": 1092.3,
+      "ms_mean": 780.0,
+      "ms_per_question": 720.8,
+      "state_words": 90
+    }
+  ]
+}

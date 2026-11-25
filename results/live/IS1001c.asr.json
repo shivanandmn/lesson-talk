@@ -1,0 +1,3299 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "base",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"text": {
+			"ctx": 448,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"mels": 80,
+		"ftype": 9
+	},
+	"params": {
+		"model": "models/ggml-base.en-q5_1.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:12,000"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 12000
+			},
+			"text": " Oh yeah. Excuse me, of course it's dead. Okay. I must be patient."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:31,000",
+				"to": "00:00:37,000"
+			},
+			"offsets": {
+				"from": 31000,
+				"to": 37000
+			},
+			"text": " Okay. So we are here for the concept design meeting."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:39,000",
+				"to": "00:00:47,000"
+			},
+			"offsets": {
+				"from": 39000,
+				"to": 47000
+			},
+			"text": " So we will first start by summarizing the previous meeting and the decision we've taken."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:48,000",
+				"to": "00:00:58,000"
+			},
+			"offsets": {
+				"from": 48000,
+				"to": 58000
+			},
+			"text": " I will take notes during this meeting so that you can look at my folder to see the summary of this meeting afterwards."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:59,000",
+				"to": "00:01:11,000"
+			},
+			"offsets": {
+				"from": 59000,
+				"to": 71000
+			},
+			"text": " So each of you will show us the various investigations they've done during previous hours."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:12,000",
+				"to": "00:01:25,000"
+			},
+			"offsets": {
+				"from": 72000,
+				"to": 85000
+			},
+			"text": " We'll then take the decision and concept and then we will define the next task to be done before the next meeting."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:26,000",
+				"to": "00:01:31,000"
+			},
+			"offsets": {
+				"from": 86000,
+				"to": 91000
+			},
+			"text": " So last time we decided to have a simple interface."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:32,000",
+				"to": "00:01:39,000"
+			},
+			"offsets": {
+				"from": 92000,
+				"to": 99000
+			},
+			"text": " We also decided to have a will to change channel, preview channel button, channel digits."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:40,000",
+				"to": "00:01:48,000"
+			},
+			"offsets": {
+				"from": 100000,
+				"to": 108000
+			},
+			"text": " Button should be protected by plastic cover or something for the remote control to look very simple."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:49,000",
+				"to": "00:01:54,000"
+			},
+			"offsets": {
+				"from": 109000,
+				"to": 114000
+			},
+			"text": " We have also button for volume and to switch on of the TV."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:55,000",
+				"to": "00:02:00,000"
+			},
+			"offsets": {
+				"from": 115000,
+				"to": 120000
+			},
+			"text": " We have also the lightening feature for the remote control to be easy to find."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:01,000",
+				"to": "00:02:10,000"
+			},
+			"offsets": {
+				"from": 121000,
+				"to": 130000
+			},
+			"text": " And for fast development and low cost we have decided to have no LCD nor voice features."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:11,000",
+				"to": "00:02:14,000"
+			},
+			"offsets": {
+				"from": 131000,
+				"to": 134000
+			},
+			"text": " So now we'll have three presentations."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:15,000",
+				"to": "00:02:28,000"
+			},
+			"offsets": {
+				"from": 135000,
+				"to": 148000
+			},
+			"text": " So the concept of specification by industrial designer, the specification of UI or UI is my name."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:29,000",
+				"to": "00:02:36,000"
+			},
+			"offsets": {
+				"from": 149000,
+				"to": 156000
+			},
+			"text": " And the last point is train watching by market expert."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:37,000",
+				"to": "00:02:42,000"
+			},
+			"offsets": {
+				"from": 157000,
+				"to": 162000
+			},
+			"text": " So maybe we can start with industrial design."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:44,000",
+				"to": "00:02:49,000"
+			},
+			"offsets": {
+				"from": 164000,
+				"to": 169000
+			},
+			"text": " So this is the presentation idea."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:52,000",
+				"to": "00:02:55,000"
+			},
+			"offsets": {
+				"from": 172000,
+				"to": 175000
+			},
+			"text": " Maybe I can switch slide on your request."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:56,000",
+				"to": "00:03:04,000"
+			},
+			"offsets": {
+				"from": 176000,
+				"to": 184000
+			},
+			"text": " I only have three slides so I just look at just these on some web pages."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:05,000",
+				"to": "00:03:11,000"
+			},
+			"offsets": {
+				"from": 185000,
+				"to": 191000
+			},
+			"text": " Yeah, I find some documentation and I think a remote control is as I mentioned previously."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:12,000",
+				"to": "00:03:19,000"
+			},
+			"offsets": {
+				"from": 192000,
+				"to": 199000
+			},
+			"text": " It's a very simple chip and the user interface is just done usually by push button."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:20,000",
+				"to": "00:03:24,000"
+			},
+			"offsets": {
+				"from": 200000,
+				"to": 204000
+			},
+			"text": " And in our case we are using a will control."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:25,000",
+				"to": "00:03:32,000"
+			},
+			"offsets": {
+				"from": 205000,
+				"to": 212000
+			},
+			"text": " So I was looking basically for that chip which is a very, very standard."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:33,000",
+				"to": "00:03:37,000"
+			},
+			"offsets": {
+				"from": 213000,
+				"to": 217000
+			},
+			"text": " And I just look for the will sensor and the standard push button."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:38,000",
+				"to": "00:03:48,000"
+			},
+			"offsets": {
+				"from": 218000,
+				"to": 228000
+			},
+			"text": " Yeah, we can change directly. In fact I have the number of that element which is very standard for remote control."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:49,000",
+				"to": "00:03:58,000"
+			},
+			"offsets": {
+				"from": 229000,
+				"to": 238000
+			},
+			"text": " The push button are usually extremely cheap but I just have one problem and this is related with the will sensor which seems to be quite expensive."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:59,000",
+				"to": "00:04:10,000"
+			},
+			"offsets": {
+				"from": 239000,
+				"to": 250000
+			},
+			"text": " And I think if we could just talk about that if we really need a will sensor or if we combine something with a push button."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:11,000",
+				"to": "00:04:17,000"
+			},
+			"offsets": {
+				"from": 251000,
+				"to": 257000
+			},
+			"text": " A will sensor is 50 times the price of a push button."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:18,000",
+				"to": "00:04:29,000"
+			},
+			"offsets": {
+				"from": 258000,
+				"to": 269000
+			},
+			"text": " A significant price on the world remote control because we can afford up to 12 euros for the price of the remote control."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:30,000",
+				"to": "00:04:40,000"
+			},
+			"offsets": {
+				"from": 270000,
+				"to": 280000
+			},
+			"text": " So will this with including all possible things so buttons will and the chip be lower than 12 euros to produce?"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:41,000",
+				"to": "00:04:50,000"
+			},
+			"offsets": {
+				"from": 281000,
+				"to": 290000
+			},
+			"text": " And I think that we should talk about the design of the box so we need some money."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:51,000",
+				"to": "00:04:55,000"
+			},
+			"offsets": {
+				"from": 291000,
+				"to": 295000
+			},
+			"text": " Did you receive the mail about voice recognition?"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:56,000",
+				"to": "00:04:58,000"
+			},
+			"offsets": {
+				"from": 296000,
+				"to": 298000
+			},
+			"text": " Oh, that's all."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:59,000",
+				"to": "00:05:01,000"
+			},
+			"offsets": {
+				"from": 299000,
+				"to": 301000
+			},
+			"text": " You received something?"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:02,000",
+				"to": "00:05:11,000"
+			},
+			"offsets": {
+				"from": 302000,
+				"to": 311000
+			},
+			"text": " It's a mail from a manufacturing division that they have basically a voice recognition chip already developed."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:12,000",
+				"to": "00:05:19,000"
+			},
+			"offsets": {
+				"from": 312000,
+				"to": 319000
+			},
+			"text": " It says right now they just use it to record the answers to particular questions."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:20,000",
+				"to": "00:05:21,000"
+			},
+			"offsets": {
+				"from": 320000,
+				"to": 321000
+			},
+			"text": " And could it be adapted?"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:22,000",
+				"to": "00:05:28,000"
+			},
+			"offsets": {
+				"from": 322000,
+				"to": 328000
+			},
+			"text": " I guess it's possible, instead of recording the answers you can just record something simpler."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:29,000",
+				"to": "00:05:33,000"
+			},
+			"offsets": {
+				"from": 329000,
+				"to": 333000
+			},
+			"text": " You can recognize some commands, you can record new commands and stuff."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:34,000",
+				"to": "00:05:36,000"
+			},
+			"offsets": {
+				"from": 334000,
+				"to": 336000
+			},
+			"text": " If you already have the added tip."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:37,000",
+				"to": "00:05:38,000"
+			},
+			"offsets": {
+				"from": 337000,
+				"to": 338000
+			},
+			"text": " Yeah, you could use it."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:39,000",
+				"to": "00:05:46,000"
+			},
+			"offsets": {
+				"from": 339000,
+				"to": 346000
+			},
+			"text": " Okay, maybe we can just listen to this presentation and then take the decision later on, according to news."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:47,000",
+				"to": "00:05:50,000"
+			},
+			"offsets": {
+				"from": 347000,
+				"to": 350000
+			},
+			"text": " But I think it's, sorry, I haven't written my personal references."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:52,000",
+				"to": "00:06:02,000"
+			},
+			"offsets": {
+				"from": 352000,
+				"to": 362000
+			},
+			"text": " I just want to mention the problem of the wheels and so which is much more expensive than any push button."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:03,000",
+				"to": "00:06:05,000"
+			},
+			"offsets": {
+				"from": 363000,
+				"to": 365000
+			},
+			"text": " If we could reduce that."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:06,000",
+				"to": "00:06:15,000"
+			},
+			"offsets": {
+				"from": 366000,
+				"to": 375000
+			},
+			"text": " We have already some good things with the back light of the push button."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:16,000",
+				"to": "00:06:17,000"
+			},
+			"offsets": {
+				"from": 376000,
+				"to": 377000
+			},
+			"text": " I have a question about that actually."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:19,000",
+				"to": "00:06:21,000"
+			},
+			"offsets": {
+				"from": 379000,
+				"to": 381000
+			},
+			"text": " What is the purpose of the light?"
+		},
+		{
+			"timestamps": {
+				"from": "00:06:22,000",
+				"to": "00:06:27,000"
+			},
+			"offsets": {
+				"from": 382000,
+				"to": 387000
+			},
+			"text": " To make something which is slightly more designed that is a square root box."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:28,000",
+				"to": "00:06:30,000"
+			},
+			"offsets": {
+				"from": 388000,
+				"to": 390000
+			},
+			"text": " You can easily find the button but the dark also."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:31,000",
+				"to": "00:06:32,000"
+			},
+			"offsets": {
+				"from": 391000,
+				"to": 392000
+			},
+			"text": " But in the dark."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:34,000",
+				"to": "00:06:36,000"
+			},
+			"offsets": {
+				"from": 394000,
+				"to": 396000
+			},
+			"text": " Yeah, but it's going to be always turned on the light."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:38,000",
+				"to": "00:06:42,000"
+			},
+			"offsets": {
+				"from": 398000,
+				"to": 402000
+			},
+			"text": " It will be turned on when the user moves the remote control, I think."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:43,000",
+				"to": "00:06:45,000"
+			},
+			"offsets": {
+				"from": 403000,
+				"to": 405000
+			},
+			"text": " What if you move it and you have it, you don't need to find it."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:47,000",
+				"to": "00:06:49,000"
+			},
+			"offsets": {
+				"from": 407000,
+				"to": 409000
+			},
+			"text": " You can see the buttons better, of course."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:50,000",
+				"to": "00:06:51,000"
+			},
+			"offsets": {
+				"from": 410000,
+				"to": 411000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:53,000",
+				"to": "00:06:53,000"
+			},
+			"offsets": {
+				"from": 413000,
+				"to": 413000
+			},
+			"text": " True."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:55,000",
+				"to": "00:06:57,000"
+			},
+			"offsets": {
+				"from": 415000,
+				"to": 417000
+			},
+			"text": " But if you move it, then you have to have some sense of it."
+		},
+		{
+			"timestamps": {
+				"from": "00:06:58,000",
+				"to": "00:07:00,000"
+			},
+			"offsets": {
+				"from": 418000,
+				"to": 420000
+			},
+			"text": " When you move it to detect that you're moving it."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:02,000",
+				"to": "00:07:05,000"
+			},
+			"offsets": {
+				"from": 422000,
+				"to": 425000
+			},
+			"text": " As soon as you start to move the remote control you have the right."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:06,000",
+				"to": "00:07:08,000"
+			},
+			"offsets": {
+				"from": 426000,
+				"to": 428000
+			},
+			"text": " Yeah, but you need another chance for that, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:07:09,000",
+				"to": "00:07:10,000"
+			},
+			"offsets": {
+				"from": 429000,
+				"to": 430000
+			},
+			"text": " Yeah, again."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:12,000",
+				"to": "00:07:13,000"
+			},
+			"offsets": {
+				"from": 432000,
+				"to": 433000
+			},
+			"text": " No, it's too expensive."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:17,000",
+				"to": "00:07:21,000"
+			},
+			"offsets": {
+				"from": 437000,
+				"to": 441000
+			},
+			"text": " I don't think that this is really expensive, but at the end this is plenty of."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:22,000",
+				"to": "00:07:23,000"
+			},
+			"offsets": {
+				"from": 442000,
+				"to": 443000
+			},
+			"text": " Unexpend."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:25,000",
+				"to": "00:07:29,000"
+			},
+			"offsets": {
+				"from": 445000,
+				"to": 449000
+			},
+			"text": " Very cheap devices but the bit installed to be."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:30,000",
+				"to": "00:07:33,000"
+			},
+			"offsets": {
+				"from": 450000,
+				"to": 453000
+			},
+			"text": " Yeah, but the experience will be a little bit too, but it's very expensive."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:34,000",
+				"to": "00:07:37,000"
+			},
+			"offsets": {
+				"from": 454000,
+				"to": 457000
+			},
+			"text": " First of all, I was thinking to have a continuous light."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:38,000",
+				"to": "00:07:43,000"
+			},
+			"offsets": {
+				"from": 458000,
+				"to": 463000
+			},
+			"text": " When you press the button, you have the light on your remote control."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:44,000",
+				"to": "00:07:46,000"
+			},
+			"offsets": {
+				"from": 464000,
+				"to": 466000
+			},
+			"text": " When you want to turn off your device."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:47,000",
+				"to": "00:07:50,000"
+			},
+			"offsets": {
+				"from": 467000,
+				"to": 470000
+			},
+			"text": " But it can be battery consuming now."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:51,000",
+				"to": "00:07:53,000"
+			},
+			"offsets": {
+				"from": 471000,
+				"to": 473000
+			},
+			"text": " To have the light always on."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:54,000",
+				"to": "00:07:55,000"
+			},
+			"offsets": {
+				"from": 474000,
+				"to": 475000
+			},
+			"text": " A little bit."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:55,000",
+				"to": "00:07:58,000"
+			},
+			"offsets": {
+				"from": 475000,
+				"to": 478000
+			},
+			"text": " Why would we discuss that after maybe."
+		},
+		{
+			"timestamps": {
+				"from": "00:07:59,000",
+				"to": "00:08:00,000"
+			},
+			"offsets": {
+				"from": 479000,
+				"to": 480000
+			},
+			"text": " The other presentation."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:01,000",
+				"to": "00:08:03,000"
+			},
+			"offsets": {
+				"from": 481000,
+				"to": 483000
+			},
+			"text": " It should be in the shirt folder."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:04,000",
+				"to": "00:08:05,000"
+			},
+			"offsets": {
+				"from": 484000,
+				"to": 485000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:06,000",
+				"to": "00:08:07,000"
+			},
+			"offsets": {
+				"from": 486000,
+				"to": 487000
+			},
+			"text": " It was last time I saw it."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:10,000",
+				"to": "00:08:11,000"
+			},
+			"offsets": {
+				"from": 490000,
+				"to": 491000
+			},
+			"text": " And it is."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:22,000",
+				"to": "00:08:25,000"
+			},
+			"offsets": {
+				"from": 502000,
+				"to": 505000
+			},
+			"text": " Just move the next slide."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:27,000",
+				"to": "00:08:30,000"
+			},
+			"offsets": {
+				"from": 507000,
+				"to": 510000
+			},
+			"text": " So basically, I want very simple, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:31,000",
+				"to": "00:08:33,000"
+			},
+			"offsets": {
+				"from": 511000,
+				"to": 513000
+			},
+			"text": " That's a major idea, as simple as possible."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:34,000",
+				"to": "00:08:41,000"
+			},
+			"offsets": {
+				"from": 514000,
+				"to": 521000
+			},
+			"text": " So I just looked at some current designs on the web of usually more complicated remote controls."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:42,000",
+				"to": "00:08:46,000"
+			},
+			"offsets": {
+				"from": 522000,
+				"to": 526000
+			},
+			"text": " And there are two of them, because even though they have many buttons, they look quite simple."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:47,000",
+				"to": "00:08:51,000"
+			},
+			"offsets": {
+				"from": 527000,
+				"to": 531000
+			},
+			"text": " In our case, we just rejected the buttons that we don't need."
+		},
+		{
+			"timestamps": {
+				"from": "00:08:53,000",
+				"to": "00:08:55,000"
+			},
+			"offsets": {
+				"from": 533000,
+				"to": 535000
+			},
+			"text": " And also, does it fit well in?"
+		},
+		{
+			"timestamps": {
+				"from": "00:08:56,000",
+				"to": "00:09:00,000"
+			},
+			"offsets": {
+				"from": 536000,
+				"to": 540000
+			},
+			"text": " Because it was a few risk problems with the user."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:01,000",
+				"to": "00:09:03,000"
+			},
+			"offsets": {
+				"from": 541000,
+				"to": 543000
+			},
+			"text": " These remote are quite big, so go to the next page."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:05,000",
+				"to": "00:09:07,000"
+			},
+			"offsets": {
+				"from": 545000,
+				"to": 547000
+			},
+			"text": " They have all these buttons, as you can see."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:08,000",
+				"to": "00:09:10,000"
+			},
+			"offsets": {
+				"from": 548000,
+				"to": 550000
+			},
+			"text": " But most of them, we just need the ones in the middle."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:11,000",
+				"to": "00:09:18,000"
+			},
+			"offsets": {
+				"from": 551000,
+				"to": 558000
+			},
+			"text": " From the bottom, where there are the numbers, and then the top, until the channel, so this middle part."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:19,000",
+				"to": "00:09:20,000"
+			},
+			"offsets": {
+				"from": 559000,
+				"to": 560000
+			},
+			"text": " The left one is exactly the same."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:21,000",
+				"to": "00:09:26,000"
+			},
+			"offsets": {
+				"from": 561000,
+				"to": 566000
+			},
+			"text": " So it's basically more or less how we would like it with big volume control, big thermal control, mutant power."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:27,000",
+				"to": "00:09:28,000"
+			},
+			"offsets": {
+				"from": 567000,
+				"to": 568000
+			},
+			"text": " It's the basic thing."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:28,000",
+				"to": "00:09:29,000"
+			},
+			"offsets": {
+				"from": 568000,
+				"to": 569000
+			},
+			"text": " So it's only the central path."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:30,000",
+				"to": "00:09:34,000"
+			},
+			"offsets": {
+				"from": 570000,
+				"to": 574000
+			},
+			"text": " So basically, something that we would look more or less the same as these two."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:35,000",
+				"to": "00:09:40,000"
+			},
+			"offsets": {
+				"from": 575000,
+				"to": 580000
+			},
+			"text": " Maybe a more economic design."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:41,000",
+				"to": "00:09:45,000"
+			},
+			"offsets": {
+				"from": 581000,
+				"to": 585000
+			},
+			"text": " I think that the volume and the buttons that are there on the top are not very easy to read to your thumb."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:46,000",
+				"to": "00:09:48,000"
+			},
+			"offsets": {
+				"from": 586000,
+				"to": 588000
+			},
+			"text": " It could be on the right side, for example."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:49,000",
+				"to": "00:09:52,000"
+			},
+			"offsets": {
+				"from": 589000,
+				"to": 592000
+			},
+			"text": " Because we don't have these input buttons and all that stuff that they have."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:53,000",
+				"to": "00:09:58,000"
+			},
+			"offsets": {
+				"from": 593000,
+				"to": 598000
+			},
+			"text": " And I think that the plastic cover is not a very good idea, because you open it, it can break."
+		},
+		{
+			"timestamps": {
+				"from": "00:09:59,000",
+				"to": "00:10:00,000"
+			},
+			"offsets": {
+				"from": 599000,
+				"to": 600000
+			},
+			"text": " You can do various things."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:02,000",
+				"to": "00:10:06,000"
+			},
+			"offsets": {
+				"from": 602000,
+				"to": 606000
+			},
+			"text": " You just need to put the channel numbers somewhere a bit out of the way."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:07,000",
+				"to": "00:10:09,000"
+			},
+			"offsets": {
+				"from": 607000,
+				"to": 609000
+			},
+			"text": " Okay, so that's it for the big buttons."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:10,000",
+				"to": "00:10:17,000"
+			},
+			"offsets": {
+				"from": 610000,
+				"to": 617000
+			},
+			"text": " It's just to press the big buttons, but it's not be difficult to press the channel buttons either."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:19,000",
+				"to": "00:10:22,000"
+			},
+			"offsets": {
+				"from": 619000,
+				"to": 622000
+			},
+			"text": " I think that if you put the cover, it would be even more difficult for the user."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:23,000",
+				"to": "00:10:23,000"
+			},
+			"offsets": {
+				"from": 623000,
+				"to": 623000
+			},
+			"text": " Okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:26,000",
+				"to": "00:10:31,000"
+			},
+			"offsets": {
+				"from": 626000,
+				"to": 631000
+			},
+			"text": " Usually what I have noticed is that people put the plastic cover on things that you normally don't mess with."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:32,000",
+				"to": "00:10:35,000"
+			},
+			"offsets": {
+				"from": 632000,
+				"to": 635000
+			},
+			"text": " The buttons for tuning the channels and stuff like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:36,000",
+				"to": "00:10:38,000"
+			},
+			"offsets": {
+				"from": 636000,
+				"to": 638000
+			},
+			"text": " That you want to protect it with."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:39,000",
+				"to": "00:10:41,000"
+			},
+			"offsets": {
+				"from": 639000,
+				"to": 641000
+			},
+			"text": " I think it's not good."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:42,000",
+				"to": "00:10:42,000"
+			},
+			"offsets": {
+				"from": 642000,
+				"to": 642000
+			},
+			"text": " Okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:43,000",
+				"to": "00:10:46,000"
+			},
+			"offsets": {
+				"from": 643000,
+				"to": 646000
+			},
+			"text": " So I don't think this is just the wheel."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:47,000",
+				"to": "00:10:49,000"
+			},
+			"offsets": {
+				"from": 647000,
+				"to": 649000
+			},
+			"text": " Some wheels can be pushed down."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:50,000",
+				"to": "00:10:52,000"
+			},
+			"offsets": {
+				"from": 650000,
+				"to": 652000
+			},
+			"text": " It could be pushed down of the wheel for their call, if you want."
+		},
+		{
+			"timestamps": {
+				"from": "00:10:55,000",
+				"to": "00:11:00,000"
+			},
+			"offsets": {
+				"from": 655000,
+				"to": 660000
+			},
+			"text": " So you could just basically use one wheel and a user could use just the wheel to do everything."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:01,000",
+				"to": "00:11:03,000"
+			},
+			"offsets": {
+				"from": 661000,
+				"to": 663000
+			},
+			"text": " Yeah, in that case."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:04,000",
+				"to": "00:11:09,000"
+			},
+			"offsets": {
+				"from": 664000,
+				"to": 669000
+			},
+			"text": " Maybe the wheel will be a good advantage of our competitors."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:10,000",
+				"to": "00:11:14,000"
+			},
+			"offsets": {
+				"from": 670000,
+				"to": 674000
+			},
+			"text": " Because otherwise it's pretty standard about the fact that it's very simple."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:16,000",
+				"to": "00:11:24,000"
+			},
+			"offsets": {
+				"from": 676000,
+				"to": 684000
+			},
+			"text": " So maybe it's worse to have more expense on that aspect."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:25,000",
+				"to": "00:11:28,000"
+			},
+			"offsets": {
+				"from": 685000,
+				"to": 688000
+			},
+			"text": " I guess the materials would tell us about that."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:29,000",
+				"to": "00:11:31,000"
+			},
+			"offsets": {
+				"from": 689000,
+				"to": 691000
+			},
+			"text": " Okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:31,000",
+				"to": "00:11:39,000"
+			},
+			"offsets": {
+				"from": 691000,
+				"to": 699000
+			},
+			"text": " So we can move to the, is there any question for designer of user interface?"
+		},
+		{
+			"timestamps": {
+				"from": "00:11:40,000",
+				"to": "00:11:44,000"
+			},
+			"offsets": {
+				"from": 700000,
+				"to": 704000
+			},
+			"text": " We can move to the next part, maybe and discuss afterwards."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:54,000",
+				"to": "00:11:55,000"
+			},
+			"offsets": {
+				"from": 714000,
+				"to": 715000
+			},
+			"text": " Okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:55,000",
+				"to": "00:11:56,000"
+			},
+			"offsets": {
+				"from": 715000,
+				"to": 716000
+			},
+			"text": " You can go."
+		},
+		{
+			"timestamps": {
+				"from": "00:11:57,000",
+				"to": "00:12:07,000"
+			},
+			"offsets": {
+				"from": 717000,
+				"to": 727000
+			},
+			"text": " So now the recent investigation we have done for the remote control."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:08,000",
+				"to": "00:12:17,000"
+			},
+			"offsets": {
+				"from": 728000,
+				"to": 737000
+			},
+			"text": " So the most important aspect for remote controls is to be fancy look and feel and not current functional look and feel."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:18,000",
+				"to": "00:12:26,000"
+			},
+			"offsets": {
+				"from": 738000,
+				"to": 746000
+			},
+			"text": " And the second aspect is that the remote control should be technological innovative."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:27,000",
+				"to": "00:12:34,000"
+			},
+			"offsets": {
+				"from": 747000,
+				"to": 754000
+			},
+			"text": " And the third most important aspect is to, is that the remote control should be easy to use."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:35,000",
+				"to": "00:12:41,000"
+			},
+			"offsets": {
+				"from": 755000,
+				"to": 761000
+			},
+			"text": " So things we have speak about before."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:44,000",
+				"to": "00:12:47,000"
+			},
+			"offsets": {
+				"from": 764000,
+				"to": 767000
+			},
+			"text": " So you can go after."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:49,000",
+				"to": "00:12:55,000"
+			},
+			"offsets": {
+				"from": 769000,
+				"to": 775000
+			},
+			"text": " And there's a fashion which is in Paris and Milan that I've detected the following trends."
+		},
+		{
+			"timestamps": {
+				"from": "00:12:56,000",
+				"to": "00:13:02,000"
+			},
+			"offsets": {
+				"from": 776000,
+				"to": 782000
+			},
+			"text": " Fruits and vegetables will be the most important thing for closest shoes and furniture."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:03,000",
+				"to": "00:13:13,000"
+			},
+			"offsets": {
+				"from": 783000,
+				"to": 793000
+			},
+			"text": " So maybe if our remote control has to be a food form or vegetable forms, something like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:14,000",
+				"to": "00:13:15,000"
+			},
+			"offsets": {
+				"from": 794000,
+				"to": 795000
+			},
+			"text": " What's the name for?"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:16,000",
+				"to": "00:13:20,000"
+			},
+			"offsets": {
+				"from": 796000,
+				"to": 800000
+			},
+			"text": " And the material is expected to be spongy."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:21,000",
+				"to": "00:13:26,000"
+			},
+			"offsets": {
+				"from": 801000,
+				"to": 806000
+			},
+			"text": " I don't know which material can be spongy and if you..."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:27,000",
+				"to": "00:13:33,000"
+			},
+			"offsets": {
+				"from": 807000,
+				"to": 813000
+			},
+			"text": " This is good also for, I think we can certainly just put electronics and spongy in the world, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:13:34,000",
+				"to": "00:13:38,000"
+			},
+			"offsets": {
+				"from": 814000,
+				"to": 818000
+			},
+			"text": " I think it is good also to have spongy and metal television."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:39,000",
+				"to": "00:13:40,000"
+			},
+			"offsets": {
+				"from": 819000,
+				"to": 820000
+			},
+			"text": " Yeah, because it's purpose."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:40,000",
+				"to": "00:13:41,000"
+			},
+			"offsets": {
+				"from": 820000,
+				"to": 821000
+			},
+			"text": " It's purpose, yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:42,000",
+				"to": "00:13:42,000"
+			},
+			"offsets": {
+				"from": 822000,
+				"to": 822000
+			},
+			"text": " Hey, that's a cool one."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:43,000",
+				"to": "00:13:47,000"
+			},
+			"offsets": {
+				"from": 823000,
+				"to": 827000
+			},
+			"text": " We could say that if you throw it, you have a sensor and you throw it and hit the television and turn it off."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:49,000",
+				"to": "00:13:51,000"
+			},
+			"offsets": {
+				"from": 829000,
+				"to": 831000
+			},
+			"text": " When it takes a shock."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:52,000",
+				"to": "00:13:55,000"
+			},
+			"offsets": {
+				"from": 832000,
+				"to": 835000
+			},
+			"text": " I know that they do that for around the clock."
+		},
+		{
+			"timestamps": {
+				"from": "00:13:56,000",
+				"to": "00:14:03,000"
+			},
+			"offsets": {
+				"from": 836000,
+				"to": 843000
+			},
+			"text": " And this, you can say that, you can go before."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:04,000",
+				"to": "00:14:05,000"
+			},
+			"offsets": {
+				"from": 844000,
+				"to": 845000
+			},
+			"text": " Before, yes."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:06,000",
+				"to": "00:14:10,000"
+			},
+			"offsets": {
+				"from": 846000,
+				"to": 850000
+			},
+			"text": " And you know here, the more important aspect is the fancy look and feel."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:11,000",
+				"to": "00:14:15,000"
+			},
+			"offsets": {
+				"from": 851000,
+				"to": 855000
+			},
+			"text": " After is the technological innovative and after the easy to use."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:16,000",
+				"to": "00:14:21,000"
+			},
+			"offsets": {
+				"from": 856000,
+				"to": 861000
+			},
+			"text": " It's innovative to use the wheel because I think it's cool."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:22,000",
+				"to": "00:14:25,000"
+			},
+			"offsets": {
+				"from": 862000,
+				"to": 865000
+			},
+			"text": " That's why I think we have to keep that if it's possible."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:26,000",
+				"to": "00:14:31,000"
+			},
+			"offsets": {
+				"from": 866000,
+				"to": 871000
+			},
+			"text": " Yeah, I think it makes it both easy and both innovative."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:32,000",
+				"to": "00:14:35,000"
+			},
+			"offsets": {
+				"from": 872000,
+				"to": 875000
+			},
+			"text": " I think it's a good aspect and it's a good look."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:36,000",
+				"to": "00:14:37,000"
+			},
+			"offsets": {
+				"from": 876000,
+				"to": 877000
+			},
+			"text": " Cool."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:38,000",
+				"to": "00:14:39,000"
+			},
+			"offsets": {
+				"from": 878000,
+				"to": 879000
+			},
+			"text": " Fancy."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:40,000",
+				"to": "00:14:45,000"
+			},
+			"offsets": {
+				"from": 880000,
+				"to": 885000
+			},
+			"text": " We have to make it look like fruit or vegetable."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:47,000",
+				"to": "00:14:51,000"
+			},
+			"offsets": {
+				"from": 887000,
+				"to": 891000
+			},
+			"text": " Maybe a color that's remembered or something."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:52,000",
+				"to": "00:14:53,000"
+			},
+			"offsets": {
+				"from": 892000,
+				"to": 893000
+			},
+			"text": " Things like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:53,000",
+				"to": "00:14:55,000"
+			},
+			"offsets": {
+				"from": 893000,
+				"to": 895000
+			},
+			"text": " The obvious thing is a banana, I guess."
+		},
+		{
+			"timestamps": {
+				"from": "00:14:58,000",
+				"to": "00:15:00,000"
+			},
+			"offsets": {
+				"from": 898000,
+				"to": 900000
+			},
+			"text": " I thought about a pea, for example."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:00,000",
+				"to": "00:15:01,000"
+			},
+			"offsets": {
+				"from": 900000,
+				"to": 901000
+			},
+			"text": " You know, a pea is like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:02,000",
+				"to": "00:15:05,000"
+			},
+			"offsets": {
+				"from": 902000,
+				"to": 905000
+			},
+			"text": " And it's easy to have in hand."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:06,000",
+				"to": "00:15:07,000"
+			},
+			"offsets": {
+				"from": 906000,
+				"to": 907000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:08,000",
+				"to": "00:15:09,000"
+			},
+			"offsets": {
+				"from": 908000,
+				"to": 909000
+			},
+			"text": " A pea."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:10,000",
+				"to": "00:15:12,000"
+			},
+			"offsets": {
+				"from": 910000,
+				"to": 912000
+			},
+			"text": " Maybe a pea, yeah, something like that."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:13,000",
+				"to": "00:15:15,000"
+			},
+			"offsets": {
+				"from": 913000,
+				"to": 915000
+			},
+			"text": " Oh, a fruit like that, I don't know."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:15,000",
+				"to": "00:15:16,000"
+			},
+			"offsets": {
+				"from": 915000,
+				"to": 916000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:16,000",
+				"to": "00:15:17,000"
+			},
+			"offsets": {
+				"from": 916000,
+				"to": 917000
+			},
+			"text": " We can discuss that."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:17,000",
+				"to": "00:15:19,000"
+			},
+			"offsets": {
+				"from": 917000,
+				"to": 919000
+			},
+			"text": " Is there anything you want to add?"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:19,000",
+				"to": "00:15:21,000"
+			},
+			"offsets": {
+				"from": 919000,
+				"to": 921000
+			},
+			"text": " Is there any fruit that is Spongy?"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:23,000",
+				"to": "00:15:24,000"
+			},
+			"offsets": {
+				"from": 923000,
+				"to": 924000
+			},
+			"text": " I don't think so."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:24,000",
+				"to": "00:15:28,000"
+			},
+			"offsets": {
+				"from": 924000,
+				"to": 928000
+			},
+			"text": " I think we can have like a pea is good."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:28,000",
+				"to": "00:15:30,000"
+			},
+			"offsets": {
+				"from": 928000,
+				"to": 930000
+			},
+			"text": " Fittwell or banana, you too."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:32,000",
+				"to": "00:15:33,000"
+			},
+			"offsets": {
+				"from": 932000,
+				"to": 933000
+			},
+			"text": " I don't think that."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:33,000",
+				"to": "00:15:35,000"
+			},
+			"offsets": {
+				"from": 933000,
+				"to": 935000
+			},
+			"text": " So maybe look and feel."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:35,000",
+				"to": "00:15:40,000"
+			},
+			"offsets": {
+				"from": 935000,
+				"to": 940000
+			},
+			"text": " What about a piece of ice with blue LED inside?"
+		},
+		{
+			"timestamps": {
+				"from": "00:15:41,000",
+				"to": "00:15:45,000"
+			},
+			"offsets": {
+				"from": 941000,
+				"to": 945000
+			},
+			"text": " It's not in the train, the train is Spongy and vegetable fruit."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:45,000",
+				"to": "00:15:47,000"
+			},
+			"offsets": {
+				"from": 945000,
+				"to": 947000
+			},
+			"text": " It's not the Italian."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:49,000",
+				"to": "00:15:53,000"
+			},
+			"offsets": {
+				"from": 949000,
+				"to": 953000
+			},
+			"text": " I think Spongy is good because it will be rubbish as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:54,000",
+				"to": "00:15:59,000"
+			},
+			"offsets": {
+				"from": 954000,
+				"to": 959000
+			},
+			"text": " So I think we can keep the wheel because it's easy."
+		},
+		{
+			"timestamps": {
+				"from": "00:15:59,000",
+				"to": "00:16:02,000"
+			},
+			"offsets": {
+				"from": 959000,
+				"to": 962000
+			},
+			"text": " It's innovative even if the cost is a bit higher."
+		},
+		{
+			"timestamps": {
+				"from": "00:16:03,000",
+				"to": "00:16:10,000"
+			},
+			"offsets": {
+				"from": 963000,
+				"to": 970000
+			},
+			"text": " And we also have to find a fruit like pea or banana"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:10,000",
+				"to": "00:16:13,000"
+			},
+			"offsets": {
+				"from": 970000,
+				"to": 973000
+			},
+			"text": " with any other idea you have."
+		},
+		{
+			"timestamps": {
+				"from": "00:16:17,000",
+				"to": "00:16:22,000"
+			},
+			"offsets": {
+				"from": 977000,
+				"to": 982000
+			},
+			"text": " What kind of fruit would you like to control your TV with?"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:34,000",
+				"to": "00:16:36,000"
+			},
+			"offsets": {
+				"from": 994000,
+				"to": 996000
+			},
+			"text": " Banana, I think it's a nice idea."
+		},
+		{
+			"timestamps": {
+				"from": "00:16:36,000",
+				"to": "00:16:41,000"
+			},
+			"offsets": {
+				"from": 996000,
+				"to": 1001000
+			},
+			"text": " Banana is also yellow so you can't lose your remote control."
+		},
+		{
+			"timestamps": {
+				"from": "00:16:43,000",
+				"to": "00:16:47,000"
+			},
+			"offsets": {
+				"from": 1003000,
+				"to": 1007000
+			},
+			"text": " You don't use the banana, the banana is curving like that,"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:47,000",
+				"to": "00:16:51,000"
+			},
+			"offsets": {
+				"from": 1007000,
+				"to": 1011000
+			},
+			"text": " but when the banana is curving like that with the wheel on the top,"
+		},
+		{
+			"timestamps": {
+				"from": "00:16:51,000",
+				"to": "00:16:55,000"
+			},
+			"offsets": {
+				"from": 1011000,
+				"to": 1015000
+			},
+			"text": " you control and here you have the first button."
+		},
+		{
+			"timestamps": {
+				"from": "00:16:57,000",
+				"to": "00:17:02,000"
+			},
+			"offsets": {
+				"from": 1017000,
+				"to": 1022000
+			},
+			"text": " I think you can just have this curve here and you move your hands here"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:02,000",
+				"to": "00:17:05,000"
+			},
+			"offsets": {
+				"from": 1022000,
+				"to": 1025000
+			},
+			"text": " to push the buttons and then you move on the other side."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:05,000",
+				"to": "00:17:08,000"
+			},
+			"offsets": {
+				"from": 1025000,
+				"to": 1028000
+			},
+			"text": " So you can have it on two sides and it will be cool."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:09,000",
+				"to": "00:17:13,000"
+			},
+			"offsets": {
+				"from": 1029000,
+				"to": 1033000
+			},
+			"text": " I think it's a good design and it's innovative as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:14,000",
+				"to": "00:17:18,000"
+			},
+			"offsets": {
+				"from": 1034000,
+				"to": 1038000
+			},
+			"text": " Maybe we can keep the banana and it will be very easy to find."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:18,000",
+				"to": "00:17:20,000"
+			},
+			"offsets": {
+				"from": 1038000,
+				"to": 1040000
+			},
+			"text": " Everybody knows what is a banana."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:20,000",
+				"to": "00:17:24,000"
+			},
+			"offsets": {
+				"from": 1040000,
+				"to": 1044000
+			},
+			"text": " Basically, if you start with fancy fruits."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:25,000",
+				"to": "00:17:28,000"
+			},
+			"offsets": {
+				"from": 1045000,
+				"to": 1048000
+			},
+			"text": " You can also take into account the fact that the banana fits"
+		},
+		{
+			"timestamps": {
+				"from": "00:17:28,000",
+				"to": "00:17:30,000"
+			},
+			"offsets": {
+				"from": 1048000,
+				"to": 1050000
+			},
+			"text": " with the color scheme of our company."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:33,000",
+				"to": "00:17:36,000"
+			},
+			"offsets": {
+				"from": 1053000,
+				"to": 1056000
+			},
+			"text": " Yeah, it's really a good point."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:40,000",
+				"to": "00:17:43,000"
+			},
+			"offsets": {
+				"from": 1060000,
+				"to": 1063000
+			},
+			"text": " I hope you do not want to die, but anyway."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:48,000",
+				"to": "00:17:49,000"
+			},
+			"offsets": {
+				"from": 1068000,
+				"to": 1069000
+			},
+			"text": " I'm recording this meeting."
+		},
+		{
+			"timestamps": {
+				"from": "00:17:50,000",
+				"to": "00:17:52,000"
+			},
+			"offsets": {
+				"from": 1070000,
+				"to": 1072000
+			},
+			"text": " I think so."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:02,000",
+				"to": "00:18:05,000"
+			},
+			"offsets": {
+				"from": 1082000,
+				"to": 1085000
+			},
+			"text": " We have to take some decisions on those aspects."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:09,000",
+				"to": "00:18:12,000"
+			},
+			"offsets": {
+				"from": 1089000,
+				"to": 1092000
+			},
+			"text": " Sorry for component."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:16,000",
+				"to": "00:18:19,000"
+			},
+			"offsets": {
+				"from": 1096000,
+				"to": 1099000
+			},
+			"text": " We have to think about those aspects."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:20,000",
+				"to": "00:18:22,000"
+			},
+			"offsets": {
+				"from": 1100000,
+				"to": 1102000
+			},
+			"text": " We will just use a standard battery."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:24,000",
+				"to": "00:18:29,000"
+			},
+			"offsets": {
+				"from": 1104000,
+				"to": 1109000
+			},
+			"text": " The chip on print we know exactly which one we are going to use."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:30,000",
+				"to": "00:18:32,000"
+			},
+			"offsets": {
+				"from": 1110000,
+				"to": 1112000
+			},
+			"text": " What do you mean by case?"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:32,000",
+				"to": "00:18:37,000"
+			},
+			"offsets": {
+				"from": 1112000,
+				"to": 1117000
+			},
+			"text": " I think it's the box that should be spongy, banana shape."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:37,000",
+				"to": "00:18:43,000"
+			},
+			"offsets": {
+				"from": 1117000,
+				"to": 1123000
+			},
+			"text": " I mean, for me, if we use a spongy banana case, it doesn't matter."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:43,000",
+				"to": "00:18:49,000"
+			},
+			"offsets": {
+				"from": 1123000,
+				"to": 1129000
+			},
+			"text": " I just want to have something to print to fix my components"
+		},
+		{
+			"timestamps": {
+				"from": "00:18:49,000",
+				"to": "00:18:50,000"
+			},
+			"offsets": {
+				"from": 1129000,
+				"to": 1130000
+			},
+			"text": " onto that box."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:50,000",
+				"to": "00:18:52,000"
+			},
+			"offsets": {
+				"from": 1130000,
+				"to": 1132000
+			},
+			"text": " It can't be inside there."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:52,000",
+				"to": "00:18:59,000"
+			},
+			"offsets": {
+				"from": 1132000,
+				"to": 1139000
+			},
+			"text": " But the thing is that the buttons and the wheel have to be spongy."
+		},
+		{
+			"timestamps": {
+				"from": "00:18:59,000",
+				"to": "00:19:04,000"
+			},
+			"offsets": {
+				"from": 1139000,
+				"to": 1144000
+			},
+			"text": " If it's spongy, then it's going to move, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:04,000",
+				"to": "00:19:07,000"
+			},
+			"offsets": {
+				"from": 1144000,
+				"to": 1147000
+			},
+			"text": " It's going to be bent a lot."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:08,000",
+				"to": "00:19:10,000"
+			},
+			"offsets": {
+				"from": 1148000,
+				"to": 1150000
+			},
+			"text": " I think it's possible."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:10,000",
+				"to": "00:19:14,000"
+			},
+			"offsets": {
+				"from": 1150000,
+				"to": 1154000
+			},
+			"text": " No, the button would be, in fact, it should be something out-shaped"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:14,000",
+				"to": "00:19:16,000"
+			},
+			"offsets": {
+				"from": 1154000,
+				"to": 1156000
+			},
+			"text": " with a spongy cover."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:16,000",
+				"to": "00:19:18,000"
+			},
+			"offsets": {
+				"from": 1156000,
+				"to": 1158000
+			},
+			"text": " Yeah, this is like..."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:22,000",
+				"to": "00:19:26,000"
+			},
+			"offsets": {
+				"from": 1162000,
+				"to": 1166000
+			},
+			"text": " Okay, out-shaped with spongy cover."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:28,000",
+				"to": "00:19:30,000"
+			},
+			"offsets": {
+				"from": 1168000,
+				"to": 1170000
+			},
+			"text": " And style battery, okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:30,000",
+				"to": "00:19:32,000"
+			},
+			"offsets": {
+				"from": 1170000,
+				"to": 1172000
+			},
+			"text": " A chip on print, there's no specific problem."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:32,000",
+				"to": "00:19:34,000"
+			},
+			"offsets": {
+				"from": 1172000,
+				"to": 1174000
+			},
+			"text": " So we agreed to put the wheel."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:40,000",
+				"to": "00:19:42,000"
+			},
+			"offsets": {
+				"from": 1180000,
+				"to": 1182000
+			},
+			"text": " We're on the top button."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:42,000",
+				"to": "00:19:44,000"
+			},
+			"offsets": {
+				"from": 1182000,
+				"to": 1184000
+			},
+			"text": " Why do we want some buttons?"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:45,000",
+				"to": "00:19:47,000"
+			},
+			"offsets": {
+				"from": 1185000,
+				"to": 1187000
+			},
+			"text": " Well, usually hold..."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:47,000",
+				"to": "00:19:50,000"
+			},
+			"offsets": {
+				"from": 1187000,
+				"to": 1190000
+			},
+			"text": " Okay, we want to be good also for the left hand user, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:19:50,000",
+				"to": "00:19:51,000"
+			},
+			"offsets": {
+				"from": 1190000,
+				"to": 1191000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:52,000",
+				"to": "00:19:54,000"
+			},
+			"offsets": {
+				"from": 1192000,
+				"to": 1194000
+			},
+			"text": " So it has to be symmetrical."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:56,000",
+				"to": "00:19:57,000"
+			},
+			"offsets": {
+				"from": 1196000,
+				"to": 1197000
+			},
+			"text": " Yeah, but it's okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:19:57,000",
+				"to": "00:20:00,000"
+			},
+			"offsets": {
+				"from": 1197000,
+				"to": 1200000
+			},
+			"text": " So let's say that it has to be..."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:00,000",
+				"to": "00:20:02,000"
+			},
+			"offsets": {
+				"from": 1200000,
+				"to": 1202000
+			},
+			"text": " Basically, you can only take two sides."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:02,000",
+				"to": "00:20:06,000"
+			},
+			"offsets": {
+				"from": 1202000,
+				"to": 1206000
+			},
+			"text": " One side where there's a thumb, and the other side where there's..."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:06,000",
+				"to": "00:20:08,000"
+			},
+			"offsets": {
+				"from": 1206000,
+				"to": 1208000
+			},
+			"text": " Yeah, also the thumb."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:08,000",
+				"to": "00:20:09,000"
+			},
+			"offsets": {
+				"from": 1208000,
+				"to": 1209000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:09,000",
+				"to": "00:20:13,000"
+			},
+			"offsets": {
+				"from": 1209000,
+				"to": 1213000
+			},
+			"text": " Or you could use this one, but don't know if it's very comfortable."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:13,000",
+				"to": "00:20:15,000"
+			},
+			"offsets": {
+				"from": 1213000,
+				"to": 1215000
+			},
+			"text": " Yeah, maybe this one is more comfortable."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:15,000",
+				"to": "00:20:17,000"
+			},
+			"offsets": {
+				"from": 1215000,
+				"to": 1217000
+			},
+			"text": " This for the wheel and then this for the buttons."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:17,000",
+				"to": "00:20:20,000"
+			},
+			"offsets": {
+				"from": 1217000,
+				"to": 1220000
+			},
+			"text": " Yeah, and I think it's okay for both right and left."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:20,000",
+				"to": "00:20:21,000"
+			},
+			"offsets": {
+				"from": 1220000,
+				"to": 1221000
+			},
+			"text": " Mm-hmm."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:21,000",
+				"to": "00:20:25,000"
+			},
+			"offsets": {
+				"from": 1221000,
+				"to": 1225000
+			},
+			"text": " So if we get left, we have the..."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:25,000",
+				"to": "00:20:28,000"
+			},
+			"offsets": {
+				"from": 1225000,
+				"to": 1228000
+			},
+			"text": " I think you can turn it this way or so."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:28,000",
+				"to": "00:20:31,000"
+			},
+			"offsets": {
+				"from": 1228000,
+				"to": 1231000
+			},
+			"text": " We can do those with wheel buttons."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:31,000",
+				"to": "00:20:33,000"
+			},
+			"offsets": {
+				"from": 1231000,
+				"to": 1233000
+			},
+			"text": " Yeah, the buttons have buttons and wheels,"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:33,000",
+				"to": "00:20:36,000"
+			},
+			"offsets": {
+				"from": 1233000,
+				"to": 1236000
+			},
+			"text": " and we only turn it around, the buttons are on the other side."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:36,000",
+				"to": "00:20:38,000"
+			},
+			"offsets": {
+				"from": 1236000,
+				"to": 1238000
+			},
+			"text": " You cannot see them."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:38,000",
+				"to": "00:20:41,000"
+			},
+			"offsets": {
+				"from": 1238000,
+				"to": 1241000
+			},
+			"text": " Well, you will get used to it."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:41,000",
+				"to": "00:20:44,000"
+			},
+			"offsets": {
+				"from": 1241000,
+				"to": 1244000
+			},
+			"text": " And more buttons have to be here and the wheels have to be here."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:44,000",
+				"to": "00:20:49,000"
+			},
+			"offsets": {
+				"from": 1244000,
+				"to": 1249000
+			},
+			"text": " The buttons are lighted, so you immediately identify the right side."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:49,000",
+				"to": "00:20:51,000"
+			},
+			"offsets": {
+				"from": 1249000,
+				"to": 1251000
+			},
+			"text": " Because you have light on buttons."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:51,000",
+				"to": "00:20:54,000"
+			},
+			"offsets": {
+				"from": 1251000,
+				"to": 1254000
+			},
+			"text": " Yeah, I know, but if you hold the other hand and the wheel is here,"
+		},
+		{
+			"timestamps": {
+				"from": "00:20:54,000",
+				"to": "00:20:58,000"
+			},
+			"offsets": {
+				"from": 1254000,
+				"to": 1258000
+			},
+			"text": " and the buttons are here, they only turn it around."
+		},
+		{
+			"timestamps": {
+				"from": "00:20:58,000",
+				"to": "00:21:00,000"
+			},
+			"offsets": {
+				"from": 1258000,
+				"to": 1260000
+			},
+			"text": " The buttons will go on the other side."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:00,000",
+				"to": "00:21:02,000"
+			},
+			"offsets": {
+				"from": 1260000,
+				"to": 1262000
+			},
+			"text": " No, you..."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:02,000",
+				"to": "00:21:05,000"
+			},
+			"offsets": {
+				"from": 1262000,
+				"to": 1265000
+			},
+			"text": " I think you will use it only on the right or left,"
+		},
+		{
+			"timestamps": {
+				"from": "00:21:05,000",
+				"to": "00:21:08,000"
+			},
+			"offsets": {
+				"from": 1265000,
+				"to": 1268000
+			},
+			"text": " and whether you're right here or left here."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:08,000",
+				"to": "00:21:10,000"
+			},
+			"offsets": {
+				"from": 1268000,
+				"to": 1270000
+			},
+			"text": " I think for left here it's okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:10,000",
+				"to": "00:21:14,000"
+			},
+			"offsets": {
+				"from": 1270000,
+				"to": 1274000
+			},
+			"text": " I can do this movement and for right here as well."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:14,000",
+				"to": "00:21:19,000"
+			},
+			"offsets": {
+				"from": 1274000,
+				"to": 1279000
+			},
+			"text": " I think this doesn't change that much."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:19,000",
+				"to": "00:21:20,000"
+			},
+			"offsets": {
+				"from": 1279000,
+				"to": 1280000
+			},
+			"text": " Okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:20,000",
+				"to": "00:21:21,000"
+			},
+			"offsets": {
+				"from": 1280000,
+				"to": 1281000
+			},
+			"text": " Yeah?"
+		},
+		{
+			"timestamps": {
+				"from": "00:21:21,000",
+				"to": "00:21:24,000"
+			},
+			"offsets": {
+				"from": 1281000,
+				"to": 1284000
+			},
+			"text": " Okay, maybe."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:24,000",
+				"to": "00:21:26,000"
+			},
+			"offsets": {
+				"from": 1284000,
+				"to": 1286000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:26,000",
+				"to": "00:21:34,000"
+			},
+			"offsets": {
+				"from": 1286000,
+				"to": 1294000
+			},
+			"text": " So, for interface we said that we have this banana shape"
+		},
+		{
+			"timestamps": {
+				"from": "00:21:34,000",
+				"to": "00:21:38,000"
+			},
+			"offsets": {
+				"from": 1294000,
+				"to": 1298000
+			},
+			"text": " with buttons on the side."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:38,000",
+				"to": "00:21:43,000"
+			},
+			"offsets": {
+				"from": 1298000,
+				"to": 1303000
+			},
+			"text": " And the wheel on the top."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:43,000",
+				"to": "00:21:52,000"
+			},
+			"offsets": {
+				"from": 1303000,
+				"to": 1312000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:52,000",
+				"to": "00:21:55,000"
+			},
+			"offsets": {
+				"from": 1312000,
+				"to": 1315000
+			},
+			"text": " So the color is yellow."
+		},
+		{
+			"timestamps": {
+				"from": "00:21:55,000",
+				"to": "00:22:02,000"
+			},
+			"offsets": {
+				"from": 1315000,
+				"to": 1322000
+			},
+			"text": " I think it's... we define everything according to what we should..."
+		},
+		{
+			"timestamps": {
+				"from": "00:22:02,000",
+				"to": "00:22:06,000"
+			},
+			"offsets": {
+				"from": 1322000,
+				"to": 1326000
+			},
+			"text": " but the decision we should take, yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:22:06,000",
+				"to": "00:22:17,000"
+			},
+			"offsets": {
+				"from": 1326000,
+				"to": 1337000
+			},
+			"text": " So maybe we can work on due respect until next meeting."
+		},
+		{
+			"timestamps": {
+				"from": "00:22:17,000",
+				"to": "00:22:23,000"
+			},
+			"offsets": {
+				"from": 1337000,
+				"to": 1343000
+			},
+			"text": " So have the final look and feel design according to the decision."
+		},
+		{
+			"timestamps": {
+				"from": "00:22:23,000",
+				"to": "00:22:31,000"
+			},
+			"offsets": {
+				"from": 1343000,
+				"to": 1351000
+			},
+			"text": " And have the user interface design and then evaluate the product."
+		},
+		{
+			"timestamps": {
+				"from": "00:22:31,000",
+				"to": "00:22:39,000"
+			},
+			"offsets": {
+				"from": 1351000,
+				"to": 1359000
+			},
+			"text": " That is to say check if it fits the requirement given by the users."
+		},
+		{
+			"timestamps": {
+				"from": "00:22:39,000",
+				"to": "00:22:44,000"
+			},
+			"offsets": {
+				"from": 1359000,
+				"to": 1364000
+			},
+			"text": " But according to your presentation it seems to be okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:22:44,000",
+				"to": "00:22:51,000"
+			},
+			"offsets": {
+				"from": 1364000,
+				"to": 1371000
+			},
+			"text": " It seems to be fancy, innovative and easy to use."
+		},
+		{
+			"timestamps": {
+				"from": "00:22:51,000",
+				"to": "00:22:59,000"
+			},
+			"offsets": {
+				"from": 1371000,
+				"to": 1379000
+			},
+			"text": " So to prepare the prototype I would suggest that the industrial designer"
+		},
+		{
+			"timestamps": {
+				"from": "00:22:59,000",
+				"to": "00:23:09,000"
+			},
+			"offsets": {
+				"from": 1379000,
+				"to": 1389000
+			},
+			"text": " and the user interface designer work together that would be better, I think."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:09,000",
+				"to": "00:23:18,000"
+			},
+			"offsets": {
+				"from": 1389000,
+				"to": 1398000
+			},
+			"text": " And so you will receive further instruction by email as usual."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:18,000",
+				"to": "00:23:21,000"
+			},
+			"offsets": {
+				"from": 1398000,
+				"to": 1401000
+			},
+			"text": " Yes, master."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:21,000",
+				"to": "00:23:24,000"
+			},
+			"offsets": {
+				"from": 1401000,
+				"to": 1404000
+			},
+			"text": " Do you need to add anything?"
+		},
+		{
+			"timestamps": {
+				"from": "00:23:24,000",
+				"to": "00:23:25,000"
+			},
+			"offsets": {
+				"from": 1404000,
+				"to": 1405000
+			},
+			"text": " No."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:25,000",
+				"to": "00:23:26,000"
+			},
+			"offsets": {
+				"from": 1405000,
+				"to": 1406000
+			},
+			"text": " You feel okay?"
+		},
+		{
+			"timestamps": {
+				"from": "00:23:26,000",
+				"to": "00:23:27,000"
+			},
+			"offsets": {
+				"from": 1406000,
+				"to": 1407000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:27,000",
+				"to": "00:23:30,000"
+			},
+			"offsets": {
+				"from": 1407000,
+				"to": 1410000
+			},
+			"text": " Do you feel free to express what you want to say?"
+		},
+		{
+			"timestamps": {
+				"from": "00:23:30,000",
+				"to": "00:23:31,000"
+			},
+			"offsets": {
+				"from": 1410000,
+				"to": 1411000
+			},
+			"text": " Yeah."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:31,000",
+				"to": "00:23:36,000"
+			},
+			"offsets": {
+				"from": 1411000,
+				"to": 1416000
+			},
+			"text": " You don't feel too constrained?"
+		},
+		{
+			"timestamps": {
+				"from": "00:23:36,000",
+				"to": "00:23:41,000"
+			},
+			"offsets": {
+				"from": 1416000,
+				"to": 1421000
+			},
+			"text": " You don't feel free to answer this."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:41,000",
+				"to": "00:23:44,000"
+			},
+			"offsets": {
+				"from": 1421000,
+				"to": 1424000
+			},
+			"text": " Okay."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:44,000",
+				"to": "00:23:45,000"
+			},
+			"offsets": {
+				"from": 1424000,
+				"to": 1425000
+			},
+			"text": " So..."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:45,000",
+				"to": "00:23:46,000"
+			},
+			"offsets": {
+				"from": 1425000,
+				"to": 1426000
+			},
+			"text": " Got you."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:46,000",
+				"to": "00:23:53,000"
+			},
+			"offsets": {
+				"from": 1426000,
+				"to": 1433000
+			},
+			"text": " See you."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:53,000",
+				"to": "00:23:56,000"
+			},
+			"offsets": {
+				"from": 1433000,
+				"to": 1436000
+			},
+			"text": " I think we can leave the room."
+		},
+		{
+			"timestamps": {
+				"from": "00:23:56,000",
+				"to": "00:24:01,000"
+			},
+			"offsets": {
+				"from": 1436000,
+				"to": 1441000
+			},
+			"text": " [inaudible]"
+		},
+		{
+			"timestamps": {
+				"from": "00:24:01,000",
+				"to": "00:24:05,000"
+			},
+			"offsets": {
+				"from": 1441000,
+				"to": 1445000
+			},
+			"text": " [inaudible]"
+		}
+	]
+}

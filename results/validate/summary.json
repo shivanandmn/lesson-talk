@@ -1,0 +1,70 @@
+{
+  "IS1001c": {
+    "recall": 0.7318,
+    "share": [
+      {
+        "keep": 1.0,
+        "gold": 0.471492148795029,
+        "uncalibrated": 0.4494,
+        "calibrated": 0.4681,
+        "cal_on_ES2006c": 0.4476
+      },
+      {
+        "keep": 0.3,
+        "gold": 0.7295997920997921,
+        "uncalibrated": 0.7005,
+        "calibrated": 0.7296,
+        "cal_on_ES2006c": 0.6977
+      },
+      {
+        "keep": 0.12,
+        "gold": 0.8373098717566358,
+        "uncalibrated": 0.7952,
+        "calibrated": 0.8284,
+        "cal_on_ES2006c": 0.7921
+      }
+    ],
+    "stretch": [
+      136.8,
+      136.2
+    ],
+    "pupil_turns": [
+      78,
+      74
+    ]
+  },
+  "ES2006c": {
+    "recall": 0.7628,
+    "share": [
+      {
+        "keep": 1.0,
+        "gold": 0.4733757704354855,
+        "uncalibrated": 0.5273,
+        "calibrated": 0.5252,
+        "cal_on_IS1001c": 0.5493
+      },
+      {
+        "keep": 0.3,
+        "gold": 0.7888533423135208,
+        "uncalibrated": 0.792,
+        "calibrated": 0.7889,
+        "cal_on_IS1001c": 0.825
+      },
+      {
+        "keep": 0.12,
+        "gold": 0.8861358048042368,
+        "uncalibrated": 0.8563,
+        "calibrated": 0.8529,
+        "cal_on_IS1001c": 0.8919
+      }
+    ],
+    "stretch": [
+      152.5,
+      133.0
+    ],
+    "pupil_turns": [
+      97,
+      90
+    ]
+  }
+}

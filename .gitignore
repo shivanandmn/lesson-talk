@@ -1,0 +1,11 @@
+# large or third-party: fetched separately, see README "Setup"
+vendor/
+models/
+data/
+audio/
+*.wav
+# generated
+results/validate/*/
+__pycache__/
+*.pyc
+*.lesson/

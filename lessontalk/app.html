@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson Talk</title>
+<style>
+:root{--bg:#f4f2ed;--fg:#1d1d1b;--mut:#6b6a66;--line:#e1ddd4;--card:#fff;
+--t:#c2562b;--p:#2f6f8f;--acc:#1d1d1b;--err:#a3321b}
+@media (prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecebe7;--mut:#a09e98;
+--line:#34332f;--card:#201f1c;--t:#e07a4f;--p:#5fa3c4;--acc:#ecebe7;--err:#f08a70}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;
+display:grid;grid-template-rows:auto 1fr}
+header{display:flex;align-items:center;gap:14px;padding:12px 20px;border-bottom:1px solid var(--line)}
+header h1{font-size:17px;margin:0}
+header .priv{font-size:13px;color:var(--mut)}
+header .sp{flex:1}
+button{font:inherit;border-radius:8px;border:1px solid var(--line);background:var(--card);
+color:var(--fg);padding:7px 12px;cursor:pointer}
+button:hover{border-color:var(--fg)}
+button.primary{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+button.danger{color:var(--err)}
+button:disabled{opacity:.5;cursor:default}
+.wrap{display:grid;grid-template-columns:300px 1fr;min-height:0}
+aside{border-right:1px solid var(--line);overflow:auto;padding:10px}
+aside h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);
+margin:16px 8px 6px;font-weight:600}
+.item{display:block;width:100%;text-align:left;border:1px solid transparent;background:none;
+padding:9px 10px;border-radius:8px;margin:1px 0}
+.item:hover{background:var(--card);border-color:var(--line)}
+.item.sel{background:var(--card);border-color:var(--fg)}
+.item .l{font-weight:550;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item .m{font-size:13px;color:var(--mut);display:flex;justify-content:space-between}
+.item .s{color:var(--t);font-weight:600;font-variant-numeric:tabular-nums}
+.main{display:grid;grid-template-rows:auto 1fr;min-height:0}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line)}
+.bar .sp{flex:1}
+.bar[hidden]{display:none}
+#view{min-height:0;overflow:auto}
+iframe{display:block}
+iframe{border:0;width:100%;height:100%;background:var(--bg)}
+.empty{padding:60px 40px;max-width:620px;color:var(--mut)}
+.empty h2{color:var(--fg);font-size:22px;margin:0 0 8px}
+.empty ol li{margin:8px 0}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--fg);
+padding:22px;width:min(560px,94vw)}
+dialog::backdrop{background:rgba(0,0,0,.35)}
+dialog h2{margin:0 0 14px;font-size:18px}
+label{display:block;font-size:13px;color:var(--mut);margin:12px 0 4px}
+input[type=text],input[type=date],input[type=number],select{width:100%;font:inherit;padding:8px 10px;
+border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.seg{display:flex;gap:6px;margin-top:4px}
+.seg label{margin:0;flex:1;border:1px solid var(--line);border-radius:8px;padding:8px 10px;color:var(--fg);cursor:pointer}
+.seg input{margin-right:6px}
+.drop{border:1.5px dashed var(--line);border-radius:10px;padding:16px;text-align:center;color:var(--mut);
+margin-top:4px;cursor:pointer}
+.drop.has{border-style:solid;color:var(--fg)}
+.drop.over{border-color:var(--fg)}
+.acts{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}
+.note{font-size:13px;color:var(--mut);margin-top:6px}
+.progress{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:14px;display:none}
+.progress i{display:block;height:100%;width:0;background:var(--acc);transition:width .2s}
+.msg{margin-top:10px;font-size:14px}
+.msg.err{color:var(--err)}
+.status{padding:60px 40px;color:var(--mut)}
+.status.err{color:var(--err)}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--fg);
+border-radius:50%;animation:s 1s linear infinite;vertical-align:-2px;margin-right:8px}
+@keyframes s{to{transform:rotate(360deg)}}
+@media (max-width:760px){.wrap{grid-template-columns:1fr}aside{max-height:35vh;border-right:0;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Lesson Talk</h1>
+  <span class="priv">Runs on this computer. Recordings are never uploaded anywhere.</span>
+  <span class="sp"></span>
+  <button class="primary" id="new">New lesson</button>
+</header>
+<div class="wrap">
+  <aside id="list"></aside>
+  <section class="main">
+    <div class="bar" id="bar" hidden>
+      <button id="swap" title="Use this if teacher and pupils look the wrong way round">Swap teacher / room</button>
+      <button id="cal">Calibrate this mic setup…</button>
+      <span class="sp"></span>
+      <button id="open" title="Open the card on its own, to print or save">Open card</button>
+      <button id="delaudio" class="danger">Delete recording</button>
+      <button id="del" class="danger">Delete lesson</button>
+    </div>
+    <div id="view"></div>
+  </section>
+</div>
+
+<dialog id="dlg">
+  <form method="dialog" id="form">
+    <h2>New lesson</h2>
+    <label for="f-label">Lesson</label>
+    <input type="text" id="f-label" placeholder="e.g. Y9 maths, period 3" required>
+    <div class="row">
+      <div><label for="f-group">Class (lessons in a class are compared)</label>
+        <input type="text" id="f-group" list="groups" placeholder="e.g. 9X2" required>
+        <datalist id="groups"></datalist></div>
+      <div><label for="f-date">Recorded on</label><input type="date" id="f-date"></div>
+    </div>
+    <label for="f-setup">Mic setup</label>
+    <select id="f-setup"></select>
+    <div class="note">Calibration is stored per setup. Use one setup per combination of mics and room.</div>
+    <label>Recording</label>
+    <div class="seg">
+      <label><input type="radio" name="mode" value="stereo" checked>One stereo file</label>
+      <label><input type="radio" name="mode" value="pair">Two files</label>
+    </div>
+    <div id="m-stereo">
+      <div class="drop" data-role="stereo">Drop the WAV file here, or click to choose</div>
+      <label for="f-ch">The teacher's lapel mic is on the</label>
+      <select id="f-ch"><option value="0">left channel</option><option value="1">right channel</option></select>
+    </div>
+    <div id="m-pair" hidden>
+      <div class="row">
+        <div class="drop" data-role="near">Teacher lapel mic (WAV)</div>
+        <div class="drop" data-role="far">Room mic (WAV)</div>
+      </div>
+      <div class="note">The two recordings are lined up automatically if they were started up to 30 s apart.</div>
+    </div>
+    <input type="file" id="picker" accept=".wav,audio/wav" hidden>
+    <div class="progress" id="prog"><i></i></div>
+    <div class="msg" id="fmsg"></div>
+    <div class="acts">
+      <button value="cancel" formnovalidate id="cancel">Cancel</button>
+      <button class="primary" id="go" value="default">Analyse</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="cdlg">
+  <form method="dialog" id="cform">
+    <h2>Calibrate this mic setup</h2>
+    <p class="note">Pick a <b>typical</b> lesson for this class, not an unusual one: calibration is most
+    accurate for lessons with a similar balance of talk. Listen to it and time how long the teacher talks
+    against how long pupils talk (a stopwatch with two lap buttons works). Enter the teacher's share of all
+    talk below. Every lesson recorded with the same setup is then recomputed.</p>
+    <label for="c-share">Hand-coded teacher share of talk (%)</label>
+    <input type="number" id="c-share" min="1" max="99" step="0.1" required>
+    <div class="msg" id="cmsg"></div>
+    <div class="acts">
+      <button value="cancel" formnovalidate>Cancel</button>
+      <button class="primary" value="default">Calibrate</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+const H = {'X-LessonTalk': '1'};
+let S = {lessons: [], setups: {}}, sel = null, files = {}, pollT = null;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+async function api(method, url, body) {
+  const r = await fetch(url, {method, headers: {...H, 'Content-Type': 'application/json'},
+                              body: body === undefined ? undefined : JSON.stringify(body)});
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(j.error || r.statusText);
+  return j;
+}
+async function load() {
+  S = await (await fetch('/api/state')).json();
+  if (sel === null && S.lessons.length) sel = S.lessons[S.lessons.length - 1].id;
+  render();
+}
+
+function render() {
+  const by = {};
+  for (const l of S.lessons) (by[l.group] ||= []).push(l);
+  const groups = Object.keys(by).sort();
+  $('groups').innerHTML = groups.map(g => `<option value="${esc(g)}">`).join('');
+  $('list').innerHTML = groups.length ? groups.map(g => `<h3>${esc(g)}</h3>` +
+    by[g].slice().reverse().map(l => {
+      const s = l.summary ? `<span class="s">${Math.round(l.summary.teacher_share*100)}%</span>`
+        : `<span>${esc(l.status)}</span>`;
+      return `<button class="item ${l.id===sel?'sel':''}" data-id="${l.id}"><span class="l">${esc(l.label)}</span>
+        <span class="m"><span>${esc(l.recorded_on)}</span>${s}</span></button>`;
+    }).join('')).join('') : '<p class="note" style="padding:8px">No lessons yet.</p>';
+  document.querySelectorAll('.item').forEach(b => b.onclick = () => { sel = b.dataset.id; render(); });
+  $('f-setup').innerHTML = Object.entries(S.setups).map(([k, v]) =>
+    `<option value="${esc(k)}">${esc(v.name)}${v.calibrated ? ' (calibrated)' : ''}</option>`).join('')
+    + '<option value="__new">New setup…</option>';
+  showLesson();
+}
+
+function showLesson() {
+  const l = S.lessons.find(x => x.id === sel);
+  clearTimeout(pollT);
+  if (!l) {
+    $('bar').hidden = true;
+    $('view').innerHTML = `<div class="empty"><h2>See how much of a lesson is teacher talk</h2>
+      <ol><li>Record a lesson with a <b>lapel mic on the teacher</b> and a <b>mic at the back of the room</b>,
+      either into one recorder as a stereo file or as two separate recordings.</li>
+      <li>Click <b>New lesson</b> and add the recording. A 30-minute lesson takes about half a minute.</li>
+      <li>Record the same class again to see the trend.</li></ol>
+      <p>Lessons are stored in <code>${esc(S.home || '')}</code>.</p></div>`;
+    return;
+  }
+  $('bar').hidden = l.status !== 'ready';
+  $('delaudio').disabled = l.audio_deleted;
+  if (l.status === 'ready') {
+    $('view').innerHTML = `<iframe src="/lessons/${l.id}/card.html?v=${Date.now()}" title="Lesson card"></iframe>`;
+    $('view').style.height = '100%';
+  } else if (l.status === 'error') {
+    $('bar').hidden = false;
+    $('view').innerHTML = `<div class="status err"><b>This recording could not be analysed.</b><br>${esc(l.error || '')}</div>`;
+  } else {
+    $('view').innerHTML = `<div class="status"><span class="spin"></span>${esc(l.status)}…</div>`;
+    pollT = setTimeout(load, 1500);
+  }
+}
+
+// ---------------------------------------------------------------- new lesson
+function mode() { return document.querySelector('input[name=mode]:checked').value; }
+document.querySelectorAll('input[name=mode]').forEach(r => r.onchange = () => {
+  $('m-stereo').hidden = mode() !== 'stereo'; $('m-pair').hidden = mode() !== 'pair';
+});
+let pickRole = null;
+function setFile(role, f) {
+  files[role] = f;
+  const d = document.querySelector(`.drop[data-role=${role}]`);
+  d.classList.add('has');
+  d.textContent = `${f.name} · ${(f.size / 1048576).toFixed(0)} MB`;
+}
+document.querySelectorAll('.drop').forEach(d => {
+  d.onclick = () => { pickRole = d.dataset.role; $('picker').click(); };
+  d.ondragover = e => { e.preventDefault(); d.classList.add('over'); };
+  d.ondragleave = () => d.classList.remove('over');
+  d.ondrop = e => { e.preventDefault(); d.classList.remove('over');
+    if (e.dataTransfer.files[0]) setFile(d.dataset.role, e.dataTransfer.files[0]); };
+});
+$('picker').onchange = e => { if (e.target.files[0]) setFile(pickRole, e.target.files[0]); e.target.value = ''; };
+$('f-setup').onchange = async e => {
+  if (e.target.value !== '__new') return;
+  const name = prompt('Name this mic setup (e.g. "Room 12, Rode lapel + Zoom H1")');
+  if (!name) { e.target.value = 'default'; return; }
+  const {id} = await api('POST', '/api/setups', {name});
+  await load(); $('f-setup').value = id;
+};
+$('new').onclick = () => {
+  files = {};
+  $('form').reset(); $('f-date').value = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll('.drop').forEach(d => { d.classList.remove('has');
+    d.textContent = d.dataset.role === 'stereo' ? 'Drop the WAV file here, or click to choose'
+      : d.dataset.role === 'near' ? 'Teacher lapel mic (WAV)' : 'Room mic (WAV)'; });
+  $('m-stereo').hidden = false; $('m-pair').hidden = true;
+  $('fmsg').textContent = ''; $('prog').style.display = 'none'; $('go').disabled = false;
+  const last = S.lessons[S.lessons.length - 1];
+  if (last) { $('f-group').value = last.group; $('f-setup').value = last.setup; }
+  $('dlg').showModal();
+};
+function put(url, file, onp) {
+  return new Promise((res, rej) => {
+    const x = new XMLHttpRequest();
+    x.open('PUT', url); x.setRequestHeader('X-LessonTalk', '1');
+    x.upload.onprogress = e => e.lengthComputable && onp(e.loaded / e.total);
+    x.onload = () => x.status < 300 ? res() : rej(new Error((JSON.parse(x.responseText || '{}').error) || x.statusText));
+    x.onerror = () => rej(new Error('upload failed'));
+    x.send(file);
+  });
+}
+$('form').onsubmit = async e => {
+  if (e.submitter && e.submitter.value === 'cancel') return;
+  e.preventDefault();
+  const m = mode(), need = m === 'stereo' ? ['stereo'] : ['near', 'far'];
+  const miss = need.filter(r => !files[r]);
+  if (miss.length) { $('fmsg').className = 'msg err'; $('fmsg').textContent = 'Add the recording first.'; return; }
+  $('go').disabled = true; $('fmsg').className = 'msg'; $('fmsg').textContent = 'Copying the recording…';
+  $('prog').style.display = 'block';
+  try {
+    const l = await api('POST', '/api/lessons', {label: $('f-label').value, group: $('f-group').value,
+      setup: $('f-setup').value, recorded_on: $('f-date').value, mode: m, teacher_channel: +$('f-ch').value});
+    const total = need.reduce((a, r) => a + files[r].size, 0); let done = 0;
+    for (const r of need) {
+      await put(`/api/lessons/${l.id}/audio/${r}`, files[r],
+        f => $('prog').firstElementChild.style.width = ((done + f * files[r].size) / total * 100) + '%');
+      done += files[r].size;
+    }
+    await api('POST', `/api/lessons/${l.id}/analyse`, {});
+    sel = l.id; $('dlg').close(); await load();
+  } catch (err) {
+    $('fmsg').className = 'msg err'; $('fmsg').textContent = err.message; $('go').disabled = false;
+  }
+};
+
+// ---------------------------------------------------------------- actions
+async function act(path, body, confirmMsg) {
+  if (confirmMsg && !confirm(confirmMsg)) return;
+  try { S = await api('POST', `/api/lessons/${sel}/${path}`, body || {}); render(); }
+  catch (e) { alert(e.message); }
+}
+$('swap').onclick = () => act('swap');
+$('open').onclick = () => window.open(`/lessons/${sel}/card.html`, '_blank');
+$('delaudio').onclick = () => act('delete-audio', {}, 'Delete the recording for this lesson? The numbers and the card are kept, but you will not be able to listen back.');
+$('del').onclick = async () => {
+  if (!confirm('Delete this lesson, its recording and its card?')) return;
+  S = await api('DELETE', `/api/lessons/${sel}`); sel = null; render();
+};
+$('cal').onclick = () => { $('cmsg').textContent = ''; $('cform').reset(); $('cdlg').showModal(); };
+$('cform').onsubmit = async e => {
+  if (e.submitter && e.submitter.value === 'cancel') return;
+  e.preventDefault();
+  try { S = await api('POST', `/api/lessons/${sel}/calibrate`, {teacher_share_pct: +$('c-share').value});
+        $('cdlg').close(); render(); }
+  catch (err) { $('cmsg').className = 'msg err'; $('cmsg').textContent = err.message; }
+};
+load();
+</script>
+</body>
+</html>

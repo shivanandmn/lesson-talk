@@ -1,0 +1,178 @@
+{
+  "label": "Kev-0.8B-Q8_0 t=12",
+  "models_endpoint": {
+    "models": [
+      {
+        "name": "models/Kev-0.8B-Q8_0.gguf",
+        "model": "models/Kev-0.8B-Q8_0.gguf",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "models/Kev-0.8B-Q8_0.gguf",
+        "aliases": [
+          "models/Kev-0.8B-Q8_0.gguf"
+        ],
+        "tags": [],
+        "object": "model",
+        "architecture": {
+          "input_modalities": [
+            "text"
+          ],
+          "output_modalities": [
+            "decisions"
+          ]
+        },
+        "created": 1795581921,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 248320,
+          "n_ctx": 4096,
+          "n_ctx_train": 262144,
+          "n_embd": 1024,
+          "n_params": 752917824,
+          "size": 801441024,
+          "ftype": "Q8_0"
+        }
+      }
+    ]
+  },
+  "reps": 10,
+  "warmup": 2,
+  "results": [
+    {
+      "n_questions": 1,
+      "input_tokens": 187,
+      "reps": 10,
+      "ms_p50": 638.5,
+      "ms_p90": 643.4,
+      "ms_min": 600.3,
+      "ms_max": 657.6,
+      "ms_mean": 632.8,
+      "ms_per_question": 638.5,
+      "state_words": 90
+    },
+    {
+      "n_questions": 3,
+      "input_tokens": 509,
+      "reps": 10,
+      "ms_p50": 1773.3,
+      "ms_p90": 1911.9,
+      "ms_min": 1630.2,
+      "ms_max": 1913.2,
+      "ms_mean": 1792.9,
+      "ms_per_question": 591.1,
+      "state_words": 90
+    },
+    {
+      "n_questions": 6,
+      "input_tokens": 997,
+      "reps": 10,
+      "ms_p50": 3561.4,
+      "ms_p90": 3591.5,
+      "ms_min": 3482.9,
+      "ms_max": 3616.3,
+      "ms_mean": 3551.8,
+      "ms_per_question": 593.6,
+      "state_words": 90
+    },
+    {
+      "n_questions": 1,
+      "input_tokens": 431,
+      "reps": 10,
+      "ms_p50": 1630.6,
+      "ms_p90": 1684.3,
+      "ms_min": 1578.5,
+      "ms_max": 1718.0,
+      "ms_mean": 1638.3,
+      "ms_per_question": 1630.6,
+      "state_words": 280
+    },
+    {
+      "n_questions": 3,
+      "input_tokens": 1241,
+      "reps": 10,
+      "ms_p50": 4277.1,
+      "ms_p90": 4393.0,
+      "ms_min": 4126.9,
+      "ms_max": 4428.5,
+      "ms_mean": 4282.3,
+      "ms_per_question": 1425.7,
+      "state_words": 280
+    },
+    {
+      "n_questions": 6,
+      "input_tokens": 2461,
+      "reps": 10,
+      "ms_p50": 8774.4,
+      "ms_p90": 9094.5,
+      "ms_min": 8670.9,
+      "ms_max": 9148.9,
+      "ms_mean": 8858.8,
+      "ms_per_question": 1462.4,
+      "state_words": 280
+    },
+    {
+      "n_questions": 1,
+      "input_tokens": 1087,
+      "reps": 10,
+      "ms_p50": 3809.8,
+      "ms_p90": 3899.3,
+      "ms_min": 3609.4,
+      "ms_max": 3951.7,
+      "ms_mean": 3791.1,
+      "ms_per_question": 3809.8,
+      "state_words": 760
+    },
+    {
+      "n_questions": 3,
+      "input_tokens": 3209,
+      "reps": 10,
+      "ms_p50": 11544.6,
+      "ms_p90": 11995.6,
+      "ms_min": 11302.8,
+      "ms_max": 12051.8,
+      "ms_mean": 11634.5,
+      "ms_per_question": 3848.2,
+      "state_words": 760
+    },
+    {
+      "n_questions": 6,
+      "input_tokens": 6397,
+      "reps": 10,
+      "ms_p50": 22936.7,
+      "ms_p90": 23612.5,
+      "ms_min": 22125.3,
+      "ms_max": 23707.3,
+      "ms_mean": 22917.3,
+      "ms_per_question": 3822.8,
+      "state_words": 760
+    }
+  ],
+  "peak_rss_kb": 3144496,
+  "peak_rss_gib": 3.0
+}

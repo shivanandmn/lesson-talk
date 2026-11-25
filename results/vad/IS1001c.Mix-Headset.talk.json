@@ -1,0 +1,83 @@
+{
+  "audio": "data/ami/audio/IS1001c.Mix-Headset.wav",
+  "vad": {
+    "span_s": 1438.9,
+    "speech_s": 1024.0,
+    "silence_s": 414.9,
+    "speech_ratio": 0.7117,
+    "n_turns": 436,
+    "turn_s_mean": 2.35,
+    "turn_s_p50": 1.72,
+    "turn_s_max": 13.18,
+    "turns_per_min": 18.18,
+    "n_gaps": 435,
+    "gap_s_p50": 0.58,
+    "gaps_over_3s": 15
+  },
+  "gold": {
+    "span_s": 1438.9,
+    "speech_s": 1304.1,
+    "silence_s": 134.8,
+    "speech_ratio": 0.9063,
+    "n_turns": 361,
+    "turn_s_mean": 3.61,
+    "turn_s_p50": 1.84,
+    "turn_s_max": 25.46,
+    "turns_per_min": 15.05,
+    "n_gaps": 231,
+    "gap_s_p50": 1.26,
+    "gaps_over_3s": 43,
+    "speakers": {
+      "A": {
+        "talk_s": 546.0,
+        "share": 0.4186,
+        "turns": 151
+      },
+      "B": {
+        "talk_s": 253.2,
+        "share": 0.1941,
+        "turns": 74
+      },
+      "C": {
+        "talk_s": 371.9,
+        "share": 0.2852,
+        "turns": 110
+      },
+      "D": {
+        "talk_s": 133.0,
+        "share": 0.102,
+        "turns": 26
+      }
+    },
+    "dominant_speaker": "A",
+    "dominant_share": 0.4186
+  },
+  "frame_agreement": {
+    "frames": 14390,
+    "accuracy": 0.8857539958304378,
+    "precision": 0.9808863487304413,
+    "recall": 0.879083046435469,
+    "f1": 0.9271986537950581,
+    "iou": 0.864278048377776
+  },
+  "attribution": {
+    "auc": 0.9891559968643846,
+    "auc_ci95": [
+      0.9786821705426356,
+      0.997082135702465
+    ],
+    "best_margin_db": 3.4,
+    "frame": {
+      "frames": 14390,
+      "accuracy": 0.9782487838776929,
+      "precision": 0.9774763865342698,
+      "recall": 0.9483082706766918,
+      "f1": 0.9626714370900418,
+      "iou": 0.9280294320533456
+    },
+    "gold_share": 0.41863921092606365,
+    "measured_share": 0.3863265724636978,
+    "near": "data/ami/audio/IS1001c.Lapel-0.wav",
+    "far": "data/ami/audio/IS1001c.Array1-01.wav"
+  }
+}

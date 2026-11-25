@@ -1,0 +1,45 @@
+### whisper/Kev CPU contention
+### host: Linux 7.0.0-43-generic x86_64  cpu: 12th Gen Intel(R) Core(TM) i7-12700K
+### llama.cpp abca692  whisper.cpp c1a2404
+### audio: 330s 16k mono   started: 2026-11-25T13:05:40+05:30
+
+=== A kev_solo_t8 ===
+  [kev_solo_t8] cold words~90 q=1 ...
+      196 tok -> p50 500.0 ms (500.0 ms/question)
+  wrote results/c_kev_solo_t8.json
+
+=== B w_base_t4__k_t8 (kev t=8, whisper t=4, ggml-base.en-q5_1.bin) ===
+  [w_base_t4__k_t8] cold words~90 q=1 ...
+      196 tok -> p50 1008.4 ms (1008.4 ms/question)
+  wrote results/c_w_base_t4__k_t8.json
+    whisper runs completed during window: 1
+    whisper wall p50 19.47s  rtf 0.0590  n=1  min 19.47 max 19.47
+
+=== B w_base_t8__k_t8 (kev t=8, whisper t=8, ggml-base.en-q5_1.bin) ===
+  [w_base_t8__k_t8] cold words~90 q=1 ...
+      196 tok -> p50 1130.4 ms (1130.4 ms/question)
+  wrote results/c_w_base_t8__k_t8.json
+    whisper runs completed during window: 1
+    whisper wall p50 14.31s  rtf 0.0434  n=1  min 14.31 max 14.31
+
+=== B w_base_t4__k_t4 (kev t=4, whisper t=4, ggml-base.en-q5_1.bin) ===
+  [w_base_t4__k_t4] cold words~90 q=1 ...
+      196 tok -> p50 1041.8 ms (1041.8 ms/question)
+  wrote results/c_w_base_t4__k_t4.json
+    whisper runs completed during window: 1
+    whisper wall p50 17.69s  rtf 0.0536  n=1  min 17.69 max 17.69
+
+=== B w_small_t4__k_t8 (kev t=8, whisper t=4, ggml-small.en-q5_1.bin) ===
+  [w_small_t4__k_t8] cold words~90 q=1 ...
+      196 tok -> p50 1031.9 ms (1031.9 ms/question)
+  wrote results/c_w_small_t4__k_t8.json
+    whisper runs completed during window: 0
+
+=== B w_base_t20__k_t20 (kev t=20, whisper t=20, ggml-base.en-q5_1.bin) ===
+  [w_base_t20__k_t20] cold words~90 q=1 ...
+      196 tok -> p50 720.8 ms (720.8 ms/question)
+  wrote results/c_w_base_t20__k_t20.json
+    whisper runs completed during window: 0
+
+=== CONTENTION COMPLETE ===
+2026-11-25T13:08:26+05:30

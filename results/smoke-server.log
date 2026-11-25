@@ -1,0 +1,23 @@
+0.00.000.666 I srv  llama_server: initializing ...
+0.00.001.311 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.002.198 W srv  server_setup: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.003.703 I srv    load_model: loading model 'models/Kev-0.8B-Q8_0.gguf'
+0.00.356.719 I decision model reads the embeddings output, enabling embedding mode
+0.00.357.418 W llama_init_from_model: model default pooling_type is [-1], but [0] was specified
+0.00.381.886 I cmn          init: llama threadpool init, n_threads = 8
+0.00.382.584 I srv          init: decision model type: kev
+0.00.386.394 W init: embeddings required but some input tokens were not marked as outputs -> overriding
+0.00.448.689 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 4096, kv_unified = 'false'
+0.00.448.733 I srv    load_model: decision model: prompt cache disabled by default, use `--cache-ram N` to enable it
+0.00.450.895 I srv  server_run_i: model loaded
+0.00.450.944 I srv  server_on_li: listening on http://127.0.0.1:9931
+0.01.029.974 I slot       select: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1
+0.01.029.984 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.01.222.925 I slot      release: id  0 | task 0 | stop processing: n_tokens = 59, truncated = 0
+0.01.222.942 I slot       select: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.705 (> 0.100 thold), f_keep = 0.525
+0.01.222.946 I slot launch_slot_: id  0 | task 1 | processing task, is_child = 0
+0.01.411.149 I slot      release: id  0 | task 1 | stop processing: n_tokens = 44, truncated = 0
+0.01.411.163 I slot       select: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.596 (> 0.100 thold), f_keep = 0.705
+0.01.411.165 I slot launch_slot_: id  0 | task 2 | processing task, is_child = 0
+0.01.608.821 I slot      release: id  0 | task 2 | stop processing: n_tokens = 52, truncated = 0
+0.01.617.702 I srv    operator(): operator(): cleaning up before exit...

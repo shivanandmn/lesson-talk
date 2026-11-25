@@ -1,0 +1,110 @@
+{
+  "label": "m_t8_tier1",
+  "models_endpoint": {
+    "models": [
+      {
+        "name": "models/Kev-4B-Q4_K_M.gguf",
+        "model": "models/Kev-4B-Q4_K_M.gguf",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "models/Kev-4B-Q4_K_M.gguf",
+        "aliases": [
+          "models/Kev-4B-Q4_K_M.gguf"
+        ],
+        "tags": [],
+        "object": "model",
+        "architecture": {
+          "input_modalities": [
+            "text"
+          ],
+          "output_modalities": [
+            "decisions"
+          ]
+        },
+        "created": 1795585211,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 248320,
+          "n_ctx": 8192,
+          "n_ctx_train": 262144,
+          "n_embd": 2560,
+          "n_params": 4207062528,
+          "size": 3022518272,
+          "ftype": "Q4_K - Medium"
+        }
+      }
+    ]
+  },
+  "reps": 8,
+  "warmup": 2,
+  "results": [
+    {
+      "n_questions": 1,
+      "input_tokens": 96,
+      "cold": true,
+      "reps": 8,
+      "ms_p50": 1057.2,
+      "ms_p90": 1101.2,
+      "ms_min": 992.0,
+      "ms_max": 1186.1,
+      "ms_mean": 1069.2,
+      "ms_per_question": 1057.2,
+      "state_words": 25
+    },
+    {
+      "n_questions": 1,
+      "input_tokens": 134,
+      "cold": true,
+      "reps": 8,
+      "ms_p50": 1669.5,
+      "ms_p90": 2072.3,
+      "ms_min": 1607.5,
+      "ms_max": 2347.8,
+      "ms_mean": 1799.5,
+      "ms_per_question": 1669.5,
+      "state_words": 50
+    },
+    {
+      "n_questions": 1,
+      "input_tokens": 196,
+      "cold": true,
+      "reps": 8,
+      "ms_p50": 2424.8,
+      "ms_p90": 2530.5,
+      "ms_min": 2327.2,
+      "ms_max": 2572.8,
+      "ms_mean": 2439.5,
+      "ms_per_question": 2424.8,
+      "state_words": 90
+    }
+  ],
+  "peak_rss_kb": 5395492,
+  "peak_rss_gib": 5.15,
+  "threads": 8
+}

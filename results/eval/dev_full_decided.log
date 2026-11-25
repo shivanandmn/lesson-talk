@@ -1,0 +1,23 @@
+762 windows   question: 'Does this excerpt contain a decision?'
+
+=== ami_w90.dev.jsonl  prompt=decided ===
+windows 762   positive 37.3%   majority-class accuracy baseline 62.7%
+latency p50 311 ms   total 235 s
+
+AUC (threshold-free) 0.5273  95% CI [0.483, 0.571]   [0.5 = coin flip, 1.0 = perfect ranking]
+  CI includes 0.5 -- NOT distinguishable from chance at this n
+mean score  positive 0.502   negative 0.489
+
+ threshold     acc    prec     rec      f1  bal-acc
+      0.30   37.7%   36.7%   93.0%   0.526    48.9%
+      0.40   43.4%   36.9%   73.2%   0.491    49.5%
+      0.50   55.4%   41.1%   45.4%   0.431    53.4%
+      0.60   59.7%   42.9%   24.3%   0.310    52.5%
+      0.70   61.7%   44.4%   11.3%   0.180    51.4%
+
+best-F1 threshold on THIS split: 0.167 -> f1 0.544, acc 37.4%, bal-acc 50.1%
+  (tuned on the split it is reported on -- carry it to the other split with --threshold before believing it)
+
+verdict: AUC 0.527 -- not distinguishable from chance (CI spans 0.5)
+
+wrote results/eval/dev_full_decided.json
