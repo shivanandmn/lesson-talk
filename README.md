@@ -53,6 +53,31 @@ the `Lapel-0` and `Array1-01` WAVs for IS1001c and ES2006c under
 [AMI corpus mirror](https://groups.inf.ed.ac.uk/ami/download/). The tests
 that need them are skipped when they are absent.
 
+### Running it for a team
+
+On one machine the app needs no accounts and only answers on 127.0.0.1. To
+share it, create accounts first; once any account exists, every request
+needs one:
+
+```sh
+./lesson-talk add-user asha          # prints a generated password once
+./lesson-talk list-users
+./lesson-talk remove-user asha
+```
+
+Then put it behind HTTPS and tell it the public hostname, e.g. with
+Tailscale Funnel:
+
+```sh
+LESSONTALK_ALLOWED_HOSTS=myhost.tailnet.ts.net ./lesson-talk serve --port 8102 --no-browser
+sudo tailscale funnel --bg --https=8443 http://127.0.0.1:8102
+```
+
+A shared server stores recordings on that server, so the "never leaves the
+computer" promise no longer holds: use it with test recordings, and do a
+DPIA before any real pupil audio goes near it. The app says so in its header
+when accounts are on.
+
 **Recording:** one recorder with two inputs (lapel on one channel, room mic
 on the other) is simplest. Two separate recorders also work: they are lined
 up automatically if they were started within 30 s of each other. WAV, 16 or

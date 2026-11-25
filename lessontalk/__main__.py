@@ -19,6 +19,15 @@ def main(argv=None) -> int:
     s = sub.add_parser("serve", help="start the app in your browser")
     s.add_argument("--port", type=int, default=8765)
     s.add_argument("--no-browser", action="store_true")
+    s.add_argument("--host", default="127.0.0.1",
+                   help="address to listen on; anything but 127.0.0.1 "
+                        "requires accounts (add-user)")
+    au = sub.add_parser("add-user", help="create a team account and print "
+                                         "its generated password")
+    au.add_argument("name")
+    ru = sub.add_parser("remove-user", help="delete a team account")
+    ru.add_argument("name")
+    sub.add_parser("list-users", help="list team accounts")
     r = sub.add_parser("report", help="analyse one recording, write a card")
     r.add_argument("stereo", nargs="?")
     r.add_argument("--teacher-channel", type=int, default=0, choices=(0, 1))
@@ -31,7 +40,18 @@ def main(argv=None) -> int:
 
     if a.cmd == "serve":
         from .server import serve
-        serve(a.port, not a.no_browser)
+        serve(a.port, not a.no_browser, a.host)
+        return 0
+    if a.cmd in ("add-user", "remove-user", "list-users"):
+        from . import auth
+        if a.cmd == "add-user":
+            pw = auth.add_user(a.name)
+            print(f"account: {a.name.strip().lower()}\npassword: {pw}\n"
+                  "Shown once. Send it to them privately.")
+        elif a.cmd == "remove-user":
+            print("removed" if auth.remove_user(a.name) else "no such account")
+        else:
+            print("\n".join(auth.users()) or "no accounts (sign-in is off)")
         return 0
 
     src = a.stereo or a.near

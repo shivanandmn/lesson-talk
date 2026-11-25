@@ -14,8 +14,14 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
 
-from . import store
+from . import auth, store
 from .audio import AudioError
+
+LOCAL_HOSTS = {"127.0.0.1", "localhost", "[::1]"}
+# Extra hostnames the app may be reached by, e.g. a Tailscale Funnel name.
+ALLOWED_HOSTS = LOCAL_HOSTS | {
+    h.strip().lower() for h in
+    os.environ.get("LESSONTALK_ALLOWED_HOSTS", "").split(",") if h.strip()}
 
 APP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "app.html")
 MAX_UPLOAD = 4 << 30  # 4 GiB, a 2-hour 48 kHz 24-bit stereo recording is ~2 GiB
@@ -33,8 +39,35 @@ class Handler(BaseHTTPRequestHandler):
     def _host_ok(self) -> bool:
         """Refuse requests whose Host is not this machine, which blocks DNS
         rebinding from a web page in the same browser."""
-        host = (self.headers.get("Host") or "").rsplit(":", 1)[0]
-        return host in ("127.0.0.1", "localhost", "[::1]")
+        host = (self.headers.get("Host") or "").lower()
+        if not host.startswith("["):
+            host = host.rsplit(":", 1)[0]
+        else:
+            host = host.split("]")[0] + "]"
+        return host in ALLOWED_HOSTS
+
+    def _client(self) -> str:
+        return (self.headers.get("X-Forwarded-For") or
+                self.client_address[0]).split(",")[0].strip()
+
+    def _authed(self) -> bool:
+        """Every request needs an account once any account exists. Sends the
+        401 or 429 itself and returns False when the request must stop."""
+        if not auth.enabled():
+            self.user = None
+            return True
+        self.user, locked = auth.check(self.headers.get("Authorization"),
+                                       self._client())
+        if self.user:
+            return True
+        if locked:
+            self._err(429, "too many failed sign-ins; try again in 10 minutes")
+        else:
+            self._send(401, b"Sign in with the account you were given.",
+                       "text/plain; charset=utf-8",
+                       {"WWW-Authenticate": 'Basic realm="Lesson Talk", '
+                                            'charset="UTF-8"'})
+        return False
 
     def _write_ok(self) -> bool:
         """Mutating calls need a custom header. A cross-site form or fetch
@@ -116,14 +149,18 @@ class Handler(BaseHTTPRequestHandler):
                 pass
 
     def _state(self) -> dict:
+        hosted = auth.enabled()
         return {"setups": store.setups(), "lessons": store.all_lessons(),
-                "home": store.HOME}
+                "home": None if hosted else store.HOME,
+                "hosted": hosted, "user": getattr(self, "user", None)}
 
     # -------------------------------------------------------------- routes
     def do_HEAD(self):
         self.do_GET()
 
     def do_GET(self):
+        if not self._authed():
+            return
         if not self._host_ok():
             return self._err(403, "forbidden")
         path = urlparse(self.path).path
@@ -144,6 +181,8 @@ class Handler(BaseHTTPRequestHandler):
         self._err(404, "not found")
 
     def do_PUT(self):
+        if not self._authed():
+            return
         if not (self._host_ok() and self._write_ok()):
             return self._err(403, "forbidden")
         m = re.fullmatch(r"/api/lessons/([0-9a-z-]+)/audio/(stereo|near|far)",
@@ -162,6 +201,8 @@ class Handler(BaseHTTPRequestHandler):
         self._json({"ok": True})
 
     def do_POST(self):
+        if not self._authed():
+            return
         if not (self._host_ok() and self._write_ok()):
             return self._err(403, "forbidden")
         path = urlparse(self.path).path
@@ -195,6 +236,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._err(400, str(e))
 
     def do_DELETE(self):
+        if not self._authed():
+            return
         if not (self._host_ok() and self._write_ok()):
             return self._err(403, "forbidden")
         m = re.fullmatch(r"/api/lessons/([0-9a-z-]+)", urlparse(self.path).path)
@@ -207,11 +250,19 @@ class Handler(BaseHTTPRequestHandler):
         self._json(self._state())
 
 
-def serve(port: int = 8765, open_browser: bool = True) -> None:
-    httpd = ThreadingHTTPServer(("127.0.0.1", port), Handler)
+def serve(port: int = 8765, open_browser: bool = True,
+          host: str = "127.0.0.1") -> None:
+    if host not in ("127.0.0.1", "localhost", "::1") and not auth.enabled():
+        raise SystemExit(
+            f"refusing to listen on {host} with no accounts: anyone who can "
+            "reach it could read and delete lessons. Create one first with "
+            "`lesson-talk add-user NAME`.")
+    httpd = ThreadingHTTPServer((host, port), Handler)
     url = f"http://127.0.0.1:{port}/"
     print(f"Lesson Talk is running at {url}")
     print(f"Lessons are kept in {store.HOME}")
+    if auth.enabled():
+        print(f"Sign-in required: {len(auth.users())} account(s)")
     print("Press Ctrl+C to stop.")
     if open_browser:
         webbrowser.open(url)
