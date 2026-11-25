@@ -83,7 +83,7 @@ server's address and the accounts. On `sigmoid` you can find them with:
 - `tailscale funnel status` gives the public address (Funnel on :8443)
 - `~/Developer/PORTS.md` is the port registry entry
 - `~/.config/lesson-talk/users.json` holds the accounts (hashes only).
-  The owner's initial password is in `~/.config/lesson-talk/password-shivanand.txt`
+  The owner's initial password is in `~/.config/lesson-talk/password-<name>.txt`
 
 Operations:
 
