@@ -267,6 +267,25 @@ def correct(measured: float, recall: float, leak: float = PUPIL_LEAK) -> float:
     return min(1.0, max(0.0, (measured - leak) / (recall - leak)))
 
 
+def rescale(part: float, raw_total: float, corrected_total: float) -> float:
+    """Correct a short window using the whole lesson's correction.
+
+    Applying `correct()` to a ten-minute window on its own pushed teacher-heavy
+    windows past 100% and clamped them there, while the timeline plainly
+    showed pupil speech in them. Instead the lesson-wide correction is applied
+    as an odds ratio: odds(window) * odds(corrected) / odds(raw). That stays
+    strictly between 0 and 100%, keeps the windows in the same order, and
+    leaves a window that looks like the whole lesson equal to the headline.
+    """
+    def odds(x):
+        x = min(max(x, 1e-4), 1 - 1e-4)
+        return x / (1 - x)
+    if part <= 0.0 or part >= 1.0:
+        return part
+    o = odds(part) * odds(corrected_total) / odds(raw_total)
+    return o / (1 + o)
+
+
 def calibrate(frames: dict, teacher_share: float) -> float:
     """The teacher recall p for this mic setup, from one lesson whose teacher
     share was hand-coded: m = q + (p - q) t  =>  p = q + (m - q) / t.
@@ -330,7 +349,7 @@ def compute(frames: dict, settings: Settings | None = None) -> dict:
     for i in range(0, n, pf):
         chunk = raw[i:i + pf]
         t, p = chunk.count(1), chunk.count(2)
-        ps = correct(t / (t + p), s.teacher_recall) if t + p else None
+        ps = rescale(t / (t + p), raw_share, tshare) if t + p else None
         if len(chunk) * hop < 120 and phases:  # fold a short tail in
             phases[-1]["end_s"] = round(dur, 1)
             continue

@@ -148,6 +148,14 @@ class Engine(unittest.TestCase):
         self.assertAlmostEqual(engine.correct(m, p, q), t, places=6)
         self.assertEqual(engine.correct(0.01, p, q), 0.0)  # clamped
 
+    def test_window_rescale_never_hits_100(self):
+        # the ES2006c case: lesson raw 42% -> 53%, a window raw 85%
+        w = engine.rescale(0.85, 0.42, 0.53)
+        self.assertTrue(0.85 < w < 0.95)
+        self.assertAlmostEqual(engine.rescale(0.42, 0.42, 0.53), 0.53)
+        self.assertLess(engine.rescale(0.999, 0.42, 0.53), 1.0)
+        self.assertEqual(engine.rescale(0.0, 0.42, 0.53), 0.0)
+
     def test_calibrate_reproduces_target(self):
         import random
         rnd = random.Random(0)
