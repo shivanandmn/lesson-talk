@@ -10,6 +10,11 @@ No cloud, no GPU, no transcription, no language model, and no pupil is ever
 identified. The product spec and the evidence behind it are in
 [`SPEC-talk.md`](SPEC-talk.md).
 
+![Lesson Talk showing a lesson card: 53% teacher talk, a timeline of teacher and pupil speech, longest teacher stretch, pupil turns and jump-to-listen buttons](docs/screenshot.png)
+
+*The demo lessons are two AMI corpus meetings (CC BY 4.0), uncalibrated, not
+classroom recordings.*
+
 ## Run it
 
 ```sh
@@ -81,3 +86,8 @@ tools/        validate_ami.py, the end-to-end accuracy check
 tests/        python3 -m unittest discover -s tests
 src/, bench/  the research that led here (VAD, attribution, Kev latency)
 ```
+
+## Licence
+
+MIT, see [`LICENSE`](LICENSE). The AMI corpus data used for validation is
+CC BY 4.0 and is not included.
